@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EKTA</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div class="content">
+        <header class='header'>
+            <img src="assets/imgs/logo.svg" alt="">
+            <div class="header__right">
+                <div class="theme">
+                   <img src="assets/imgs/sun_light.svg" alt="">
+                    <div class="trigger">
+                        <div class="trigger__inner">
+                            
+                        </div>
+                    </div>
+                    <img src="assets/imgs/moon_light.svg" alt="">
+                </div>
+                <div class="language">
+                    <img class="language__flag" src="assets/imgs/flags/Ukraine.svg" alt="">
+                    <span>UA</span>
+                    <div class="language__other" id="language">
+                        <img class="language__flag" src="assets/imgs/flags/russia.svg" alt="">
+                        <span>RU</span>
+                        <img class="language__flag" src="assets/imgs/flags/England.svg" alt="">
+                        <span>EN</span>
+                    </div>    
+                    <img onclick="language_more()" id="language_button" class="language__arrow" src="assets/imgs/down_arrow.svg" alt="">
+                </div>
+                   <div class="header__navigation-links">
+                    <nav class="navigation">
+                        <a href="#" class="navigation__elem">Вартість</a>
+                        <a href="#" class="navigation__elem">Види спорту</a>
+                        <a href="#" class="navigation__elem">Питання</a>
+                        <a href="#" class="navigation__elem">Відгуки</a>
+                        <a href="#" class="navigation__elem">Контакти</a>
+                    </nav>
+                    <div class="tel header__tel">
+                        <a href="tel:+380800305122">0 800 305 122</a>
+                        <span>(дзвоніть 24/7)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="burger">
+                
+            </div>
+        </header>
+        <main>
+            <section class="main-form">
+                <div class="main-form__left"><h2>Оформіть страхування для <span>екстремального</span> виду спорту</h2>
+                <p class="main-form__text">
+                    У разі отримання спортивної травми. Ми гарантновано надамо медичну домогу та виплатимо компенсацію
+                </p>
+                <img src="assets/imgs/man.jpg" alt=""></div>
+                        <form action="#" class="main-form__form first-form"><div class="main-form__right"></div>
+                        <span class="first-form__header">Оформіть поліс онлайн</span>
+                        <span class="first-form__discr">Територія дії полісу</span>
+                        <input type="text" placeholder="Виберіть територію">
+                        <span class="first-form__discr">Ваш вік</span>
+                        <input type="text" placeholder="Введіть дату">
+                        <span class="first-form__discr">Термін дії полісу</span>
+                        <input type="text" placeholder="Введіть дату">
+                        <span class="first-form__discr">Покриття на сумму</span>
+                        <input type="text" placeholder="50 000 USD">
+                        <span class="first-form__discr">Вид спорту</span>
+                        <input type="text" placeholder="Виберіть спорт">
+                        <span class="first-form__code">У вас есть промокод?</span>
+                        <div class="main-form-checkbox-outer">
+                        <input type="checkbox">
+                        <span>Приймаю умови договору</span>
+                </div>
+                        <input type="submit" value="Далі"></form>
+            </section>
+            <section class="programm">
+                <h2>Програма <span>страхування</span></h2>
+                <div class="programm__conteiner">
+                  <div class="programm__elem-wrapper">
+                   <div class="programm__elem-outer">
+                   <div class="programm__elem" onclick="plus_click(0)"><span>Усі види травм</span><div class="plus programm__plus"></div></div><div class="programm__other programm_other_index">
+                       <ul>
+                           <li>розтягнення</li>
+                           <li>удари</li>
+                           <li>переломи</li>
+                           <li>пошкодження внутрішніх органів</li>
+                           <li>пошкодження органів слуху/зору</li>
+                           <li>травми м’яких тканин</li>
+                           <li>травми кісток і суглобів</li>
+                           <li>травми дихальної системи</li>
+                       </ul>
+                   </div></div></div>
+                    <div class="programm__elem-wrapper"><div class="programm__elem-outer">
+                    <div class="programm__elem" onclick="plus_click(1)"><span>Втрата життя</span><div class="plus programm__plus"></div></div><div class="programm__other programm_other_index">
+                        <ul>
+                           <li>репатріація тіла на батьківщину</li>
+                           <li>поховання на місці</li>
+                       </ul>
+                    </div></div></div>
+                    <div class="programm__elem-wrapper"><div class="programm__elem-outer"><div class="programm__elem" onclick="plus_click(2)"><span>Медична допомога</span><div class="plus programm__plus"></div></div><div class="programm__other programm_other_index">
+                        <ul>
+                           <li>лікування внаслідок травми</li>
+                           <li>виклик лікаря</li>
+                           <li>виклик швидкої допомоги</li>
+                           <li>медико-транспортні послуги</li>
+                           <li>медична евакуація</li>
+                       </ul>
+                       </div></div></div>
+                    <div class="programm__elem-wrapper"><div class="programm__elem-outer">
+                   <div class="programm__elem" onclick="plus_click(3)"><span>COVID-19</span><div class="plus programm__plus"></div></div><div class="programm__other programm_other_index">
+                        <ul>
+                           <li>покриття діагностування COVID</li>
+                           <li>покриття лікування COVID</li>
+                           <li>медикаментозне забезпечення</li>
+                           <li>амбулаторне лікування</li>
+                           <li>стаціонарне лікування</li>
+                       </ul>
+                    </div></div>
+                </div></div>
+                <div class="programm__atantion">
+                    <img src="assets/imgs/atantion.svg" alt="">
+                    <p>Якщо у вас стався нещасний випадок, ми потурбуємося про ваше лікування: швидко знайдемо найближчу лікарню, організуємо транспортування туди, оформимо депозит для надання медичних послуг та оплатимо всі необхідні ліки</p>
+                </div>
+            </section>
+            <section class="step-slider">
+                <div class="slider">
+                    <div class="slider__elem_visible slider__elem slider__elem_active">
+                          <div class="slider__text-outer">
+                               <p class="slider__text1">крок 1
+                               </p>
+                               <p class="slider__text2">Розрахуйте</p>
+                               <p class="slider__text3">вартість поліса</p></div>
+                        <div class="slider__img-outer">
+                            <img src="assets/imgs/steps/1.png" alt="">
+                        </div>
+                        <div class="slider__next-button">
+                            <button onclick="slider_next_step()"><span>Наступний</span></button>
+                        </div>
+                    </div>
+                    <div class="slider__elem_visible slider__elem"><div class="slider__text-outer">
+                       <p class="slider__text1">крок 2
+                       </p>
+                       <p class="slider__text2">Правильно </p>
+                       <p class="slider__text3">напишіть Ваші дані</p></div>
+                        <div class="slider__img-outer">
+                            <img src="assets/imgs/steps/2.png" alt="">
+                        </div>
+                        <div class="slider__next-button">
+                            <button onclick="slider_next_step()"><span>Наступний</span></button>
+                        </div></div>
+                    <div class="slider__elem_visible slider__elem"><div class="slider__text-outer">
+                               <p class="slider__text1">крок 3
+                               </p>
+                               <p class="slider__text2">Перевірте особисту</p>
+                               <p class="slider__text3">інформацію</p></div>
+                        <div class="slider__img-outer">
+                            <img src="assets/imgs/steps/3.png" alt="">
+                        </div>
+                        <div class="slider__next-button">
+                            <button onclick="slider_next_step()"><span>Наступний</span></button>
+                        </div></div>
+                    <div class="slider__elem_visible slider__elem"><div class="slider__text-outer">
+                               <p class="slider__text1">крок 4
+                               </p>
+                               <p class="slider__text2">Сплатіть страховку </p>
+                               <p class="slider__text3">онлайн</p></div>
+                        <div class="slider__img-outer">
+                            <img src="assets/imgs/steps/4.png" alt="">
+                        </div>
+                        <div class="slider__next-button">
+                            <button onclick="slider_next_step()"><span>Наступний</span></button>
+                        </div></div>
+                    <div class="slider__elem"><div class="slider__text-outer">
+                               <p class="slider__text1">крок 5
+                               </p>
+                               <p class="slider__text2">Розрахуйте</p>
+                               <p class="slider__text3">вартість поліса</p></div>
+                        <div class="slider__img-outer">
+                            <img src="assets/imgs/steps/5.png" alt="">
+                        </div>
+                        <div class="slider__next-button">
+                            <button onclick="slider_next_step()"><span>Наступний</span></button>
+                        </div></div>
+                </div>
+            </section>
+            <section class="traumas">
+                <h2>Які травми ви можете <span>отримати?</span></h2>
+                <div class="traumas__outer">
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/1.svg" alt=""><span>Розтягнення</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/5.svg" alt=""><span>Удари</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/2.svg" alt=""><span>Переломи</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/6.svg" alt=""><span>Пошкодження внутрішніх органів</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/3.svg" alt=""><span>Пошкодження органів слуху та зору </span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/7.svg" alt=""><span>Травми м’яких тканин</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/4.svg" alt=""><span>Травми кісток і суглобів</span></div>
+                    <div class="traumas__elem"><img src="assets/imgs/traumas/8.svg" alt=""><span>Травми дихальної системи</span></div>
+                </div>
+            </section>
+            <section class="what-doing">
+                <h2><span>Що робити</span> у разі страхового випадку?</h2>
+                <div class="what-doing__main">
+                    <div class="what_doing__elem what_doing__elem_first"><div class="what_doing__elem_first-img-outer"><img src="assets/imgs/what_doing/1.svg" alt=""></div><p class="what_doing__elem-header">крок <span>1</span></p><p class="what_doing__elem-text">Якщо з вами щось трапилося, одразу зверніться до страхової компанії. 
+                    Це можна зробити за телефоном гарячої лінії <span>0 800 305 122</span> або 
+                    <span>у месенджері</span></p></div>
+                    <div class="what_doing__elem what_doing__elem_second"><div class="what_doing__elem-outer"><p class="what_doing__elem-header">крок <span>2</span></p><p class="what_doing__elem-text">Вкажіть особисті дані, номер страхового поліса та ваше точне місце перебування</p></div>
+                    <svg class="what_doing__elem-img" width="87" height="88" viewBox="0 0 87 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_158_2321)">
+<path d="M27.7494 22.6809H59.1674C61.4058 22.6809 63.2273 20.8649 63.2273 18.6237V14.6872C63.2273 12.4488 61.4058 10.63 59.1674 10.63H27.7494C25.5055 10.63 23.6895 12.446 23.6895 14.6872V18.6265C23.6895 20.8622 25.5055 22.6809 27.7494 22.6809ZM56.3721 13.4857H59.2744V19.8307H56.3721V13.4857ZM49.1876 13.4857H52.0926V19.8307H49.1876V13.4857ZM42.0086 13.4857H44.9137V19.8307H42.0086V13.4857ZM34.8269 13.4857H37.7265V19.8307H34.8269V13.4857ZM27.6424 13.4857H30.5475V19.8307H27.6424V13.4857Z" fill="#2D64F4" fill-opacity="0.1"/>
+<path d="M28.5416 24.7109V31.0697L24.6572 35.9608H62.2639L58.3768 31.0697V24.7109H28.5416Z" fill="#2D64F4" fill-opacity="0.1"/>
+<path d="M30.0572 77.1527H56.8529C62.2104 77.1527 63.8974 73.0708 64.4296 69.5759H22.4805C23.0154 73.0708 24.7025 77.1527 30.0572 77.1527Z" fill="#2D64F4" fill-opacity="0.1"/>
+<path d="M22.2373 39.0112V66.5339H64.6775V39.0112H22.2373ZM53.049 56.8832H47.5708V62.3642H39.3494V56.8832H33.8685V48.6591H39.3494V43.1782H47.5708V48.6591H53.049V56.8832Z" fill="#2D64F4" fill-opacity="0.1"/>
+</g>
+<defs>
+<clipPath id="clip0_158_2321">
+<rect width="86.9136" height="88" fill="white"/>
+</clipPath>
+</defs>
+</svg></div>
+                    <div class="what_doing__elem what_doing__elem_second">
+                    <div class="what_doing__elem-outer"><p class="what_doing__elem-header">крок <span>3</span></p><p class="what_doing__elem-text">Отримайте медичну допомогу та грошову компенсацію</p></div>
+                    <svg width="60" height="74" viewBox="0 0 60 74" fill="none" class="what_doing__elem-img" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.6155 0.10376H30.3275H6.38346C3.02146 0.10376 0.397461 2.81225 0.397461 6.09527V67.8981C0.397461 71.2632 3.10346 73.8896 6.38346 73.8896H30.3275H53.6975C57.0595 73.8896 59.6835 71.1811 59.6835 67.8981V6.09527C59.6835 2.81225 56.9775 0.10376 53.6155 0.10376ZM8.26946 8.72168H47.7115C48.3675 8.72168 48.9415 9.29621 48.9415 9.95282C48.9415 10.6094 48.3675 11.1839 47.7115 11.1839H8.26946C7.61346 11.1839 7.03946 10.6094 7.03946 9.95282C7.12146 9.29621 7.61346 8.72168 8.26946 8.72168ZM8.26946 14.467H35.3295C35.9855 14.467 36.5595 15.0415 36.5595 15.6981C36.5595 16.3547 35.9855 16.9292 35.3295 16.9292H8.26946C7.61346 16.9292 7.03946 16.3547 7.03946 15.6981C7.12146 15.0415 7.61346 14.467 8.26946 14.467ZM8.26946 56.6538H24.7515C25.4075 56.6538 25.9815 57.2283 25.9815 57.8849C25.9815 58.5415 25.4075 59.116 24.7515 59.116H8.26946C7.61346 59.116 7.03946 58.5415 7.03946 57.8849C7.12146 57.2283 7.61346 56.6538 8.26946 56.6538ZM8.26946 50.6622H24.7515C25.4075 50.6622 25.9815 51.2368 25.9815 51.8934C25.9815 52.55 25.4075 53.1245 24.7515 53.1245H8.26946C7.61346 53.1245 7.03946 52.55 7.03946 51.8934C7.12146 51.1547 7.61346 50.6622 8.26946 50.6622ZM8.26946 62.399H16.4695C17.1255 62.399 17.6995 62.9736 17.6995 63.6302C17.6995 64.2868 17.1255 64.8613 16.4695 64.8613H8.26946C7.61346 64.8613 7.03946 64.2868 7.03946 63.6302C7.12146 62.8915 7.61346 62.399 8.26946 62.399ZM35.9855 56.6538H52.4675C53.1235 56.6538 53.6975 57.2283 53.6975 57.8849C53.6975 58.5415 53.1235 59.116 52.4675 59.116H35.9855C35.3295 59.116 34.7555 58.5415 34.7555 57.8849C34.7555 57.2283 35.2475 56.6538 35.9855 56.6538ZM35.9855 50.6622H52.4675C53.1235 50.6622 53.6975 51.2368 53.6975 51.8934C53.6975 52.55 53.1235 53.1245 52.4675 53.1245H35.9855C35.3295 53.1245 34.7555 52.55 34.7555 51.8934C34.7555 51.1547 35.2475 50.6622 35.9855 50.6622ZM35.9855 62.399H44.1855C44.8415 62.399 45.4155 62.9736 45.4155 63.6302C45.4155 64.2868 44.8415 64.8613 44.1855 64.8613H35.9855C35.3295 64.8613 34.7555 64.2868 34.7555 63.6302C34.7555 62.8915 35.2475 62.399 35.9855 62.399ZM52.3855 42.2085C47.8755 42.2085 45.7435 38.2689 43.8575 34.8217C42.0535 31.6207 40.4955 28.8302 37.5435 28.8302C34.5915 28.8302 33.0335 31.6207 31.2295 34.8217C29.3435 38.2689 27.1295 42.2085 22.7015 42.2085C18.1915 42.2085 16.0595 38.2689 14.1735 34.8217C12.3695 31.6207 10.8115 28.8302 7.85946 28.8302C7.12146 28.8302 6.54746 28.2556 6.54746 27.517C6.54746 26.7783 7.12146 26.2038 7.85946 26.2038C12.3695 26.2038 14.5015 30.1434 16.3875 33.5905C18.1915 36.7915 19.7495 39.5821 22.7015 39.5821C25.6535 39.5821 27.2115 36.7915 29.0155 33.5905C30.9015 30.1434 33.1155 26.2038 37.5435 26.2038C41.9715 26.2038 44.1855 30.1434 46.0715 33.5905C47.8755 36.7915 49.4335 39.5821 52.3855 39.5821C53.1235 39.5821 53.6975 40.1566 53.6975 40.8953C53.6975 41.6339 53.1235 42.2085 52.3855 42.2085Z" fill="#2D64F4" fill-opacity="0.1"/>
+</svg></div>
+                </div>
+            </section>
+<!--
+            <section class="sport">
+                <div class="sport__left">
+                    <h2>Страхування всіх <span>небезпечних</span> видів спорту</h2>
+                    <div class="sport__sports-outer">
+                        <span class="sport__elem">Автомобільний спорт на спеціальних трасах</span>
+                        <span class="sport__elem">Армреслінг</span>
+                        <span class="sport__elem">Бейсджампінг</span>
+                        <span class="sport__elem">Банджі-джампінг, роуп-джампінг та інші види тарзанок</span>
+                        <span class="sport__elem">Білдеринг</span>
+                        <span class="sport__elem">Бобслей</span>
+                        <span class="sport__elem">Вейкборд</span>
+                        <span class="sport__elem">Велосипедний спорт (включно з мотокросом, шосейним, bmx...</span>
+                        <span class="sport__elem">Вінгсьют</span>
+                        <span class="sport__elem">Каньйонінг</span>
+                        <span class="sport__elem">Гірські лижі та сноуборд поза облаштованими або...</span>
+                        <span class="sport__elem">Єдиноборства (включно з будь-якими видами...</span>
+                        <span class="sport__elem">Зорбінг</span>
+                        <span class="sport__elem">Кліфдайвінг</span>
+                        <span class="sport__elem">Маунтинборд</span>
+                        <span class="sport__elem">Полювання із застосуванням будь-якого виду зброї</span>
+                        <span class="sport__elem">Руфінг</span>
+                        <span class="sport__elem">Параглайдинг</span>
+                        <span class="sport__elem">Паркур і фриран</span>
+                        <span class="sport__elem">Рафтинг</span>
+                        <span class="sport__elem">Родео (булрайдинг)</span>
+                        <span class="sport__elem">Ролерблейдинг</span>
+                        <span class="sport__elem">Скайсерфінг</span>
+                        <span class="sport__elem">Спуск на тролеї (тросі)</span>
+                        <span class="sport__elem">Стритлагінг</span>
+                        <span class="sport__elem">Флайборд</span>
+                        <span class="sport__elem">Фристайл (гірськолижний і сноубордичний)</span>
+                        <span class="sport__elem">Бокінг</span>
+                        <span class="sport__elem">Пого-стік</span>
+                        <span class="sport__elem">Фігурне катання</span>
+                        <span class="sport__elem">Кайтинг (включно з кайтсерфінгом та</span>
+                        <span class="sport__elem">Хокей</span>
+                    </div>
+                </div>
+                <div class="sport__right">
+                   <p>Для всіх видів спорту</p>
+                    <img src="assets/imgs/rollers.png" alt="" height="377px">
+                </div>
+            </section>
+-->
+            <section class="extreme">
+                <div class="extreme__left"><h2><span>Надійне</span> страхування екстремалів</h2><p>Ми знаємо, як ви любите екстремальні види спорту 
+та відчуття адреналіну в крові. Втім, ці заняття часто супроводжуються небезпечними травмами, які спричиняють ризики не лише для вашого здоров’я, а й для життя.
+<br><br>
+Саме тому ЕКТА підготувала послугу медичного страхування, розроблену спеціально для спортсменів-екстремалів, щоб надати вам якісне лікування та відмінний сервіс у ситуаціях, де немає права на помилку.
+<br><br>
+Страхування захищає вас під час змагань, тренувань, туристичних активностей тощо. 
+</p></div>
+                <div class="extreme__right">
+                    <div class="extreme__right-elem"><div class="extreme__right-img-outer"><img src="assets/imgs/extreme/1.svg" alt=""></div><span>Страхування по всьому світу</span></div>
+                    <div class="extreme__right-elem"><div class="extreme__right-img-outer"><img src="assets/imgs/extreme/2.svg" alt=""></div><span>Страхування по всім видам спорту</span></div>
+                    <div class="extreme__right-elem"><div class="extreme__right-img-outer"><img src="assets/imgs/extreme/3.svg" alt=""></div><span>Покриття на сумму до 50 000 у.о.</span></div>
+                    <div class="extreme__right-elem"><div class="extreme__right-img-outer"><img src="assets/imgs/extreme/4.svg" alt=""></div><span>Страхування екстремалів до 85 років</span></div>
+                    <div class="extreme__right-elem"><div class="extreme__right-img-outer"><img src="assets/imgs/extreme/5.svg" alt=""></div><span>Підтримка 24/7</span></div>
+                    <div class="extreme__right-background"></div>
+                    <p class="extreme__right-header">EXTREME</p>
+                </div>
+            </section>
+            <section class="faq">
+                <h2>Питання - Відповідь <span>(FAQ)</span></h2>
+                <div class="faq__questions">
+                   <div class="faq__question-wrapper"><div class="faq__question-outer">
+                    <div class="faq__question"><span>Навіщо оформлювати екстремальну страховку?</span><img src="assets/imgs/down_arrow.svg" onclick="faq_answer(0)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Екстремальна страховка не зможе захистити вас від вивиху або перелому, але точно позбавить ряду фінансових проблем у разі нещасного випадку, потурбується про вибір лікарні та транспортування туди.</p>
+                    </div>
+                       </div></div>
+                    <div class="faq__question-wrapper"><div class="faq__question-outer"><div class="faq__question"><span>Коли вступає в дію екстремальне страхування?</span> <img src="assets/imgs/down_arrow.svg" onclick="faq_answer(1)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non asperiores, debitis totam mollitia odit quasi corporis maiores fugiat ipsam sint. Facere nemo quo aspernatur pariatur eum, aperiam ad esse voluptatum iure, accusamus ipsa. Rerum quia doloribus consequuntur hic. Eum, nostrum.</p>
+                        </div></div></div>
+                    <div class="faq__question-wrapper"><div class="faq__question-outer"><div class="faq__question"><span>Чи діє страхування за кордоном?</span> <img src="assets/imgs/down_arrow.svg" onclick="faq_answer(2)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, quibusdam. Maxime blanditiis, maiores esse consequuntur nisi sunt excepturi, impedit similique ipsa harum ratione commodi aliquid laborum, mollitia quae quaerat natus? Animi, eaque, minima soluta molestiae eius et! Ea, rerum unde!</p>
+                        </div></div></div>
+                    <div class="faq__question-wrapper"><div class="faq__question-outer"><div class="faq__question"><span>Що є страховим випадком?</span><img src="assets/imgs/down_arrow.svg" onclick="faq_answer(3)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ex voluptatem debitis repellendus numquam, illo ipsam fugit corrupti. Neque atque assumenda deserunt molestiae quo consequuntur quisquam, eos, commodi animi cumque, explicabo dolorum provident? Blanditiis veniam, ea ex! Ipsum, obcaecati, illo.</p>
+                        </div></div></div>
+                    <div class="faq__question-wrapper"><div class="faq__question-outer"><div class="faq__question"><span>Як відбувається виплата коштів при настанні страхового випадку?</span><img src="assets/imgs/down_arrow.svg" onclick="faq_answer(4)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repudiandae, asperiores id quae, pariatur libero eius quod maiores, facilis atque consequuntur. Obcaecati tempore quo, maxime rem, similique voluptatem nisi a temporibus illum expedita, ex quas in excepturi adipisci earum asperiores.</p>
+                        </div></div></div>
+                    <div class="faq__question-wrapper"><div class="faq__question-outer"><div class="faq__question"><span>Як з нами зв'язатися?</span><img src="assets/imgs/down_arrow.svg" onclick="faq_answer(5)" width="18px" alt="" class="faq__down"></div><div class="faq__answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor laboriosam omnis et provident corporis, ipsam repellendus quae, dolore voluptatibus delectus facere. Saepe tempore rem error tenetur numquam tempora a similique, vitae unde, non, culpa odit pariatur! Minus, consectetur adipisci sit.</p>
+                        </div></div></div>
+                </div>
+            </section>
+        </main>    
+    </div>
+    <footer class="footer">
+        <div class="footer__links">
+            <div class="footer__elem footer__elem_logo">
+                <img src="assets/imgs/logo.svg" width="105px" alt="">
+                <p>©2021 All Rights Reserved Terms of Use and Privacy Policy</p>
+            </div>
+            <div class="footer__elem footer__elem-phone"><p>Номер підтримки</p><a href="tel:+380800305122">0 800 305 122</a></div>
+            <div class="footer__elem footer__elem_social">
+                <p>Cоц.мережі</p>
+                <a href="#"><img src="assets/imgs/footer/1.svg" alt=""></a>
+                <a href="#"><img src="assets/imgs/footer/2.svg" alt=""></a>
+                <a href="#"><img src="assets/imgs/footer/3.svg" alt=""></a>
+                <a href="#"><img src="assets/imgs/footer/4.svg" alt=""></a>
+            </div>
+            <div class="footer__elem footer__elem_google"><img src="assets/imgs/footer/google.svg" alt=""><div class="footer__rate">
+            <img src="assets/imgs/footer/stars.svg" alt=""><span>4,5</span></div>
+            </div>
+            <div class="footer__elem footer__elem_other"><span>Договір оферти</span><span>Політика конфіденційності</span></div>
+            <div class="footer__elem footer__elem_pay">
+                <div class="footer__pay-visa-outer"><img src="assets/imgs/footer/visa.svg" alt=""></div>
+                <div class="footer__pay-googlepay-outer"><img src="assets/imgs/footer/googlepay.svg" alt=""></div>
+                <div class="footer__pay-mastercard-outer"><img src="assets/imgs/footer/mastercard.svg" alt=""></div>
+                <div class="footer__pay-googlepay-outer"><img src="assets/imgs/footer/googlepay.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="footer__adres">
+            <p class="footer__adres-header">Адрес:</p>
+            <p>Україна, м. Київ, 03150, вул. Ділова, 5, корпус 2, В1</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -103,6 +103,7 @@
     }
 }
 .header{
+    padding: 0 16px;
     margin-top: 39px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -111,10 +112,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img{
+    @media screen and (max-width: 790px){
+        padding: 0;
+    }
+    .header__logo{
         @media screen and (max-width: 790px){
             width: 90px;
             height: 47px;
+            margin-left: 16px;
         }
     }
     .header__right{ 
@@ -144,6 +149,7 @@
     &:before{
         content: '';
         top: 4px;
+        right: 0;
         position: absolute;
         width: 20px;
         height: 2px;
@@ -151,6 +157,7 @@
         border-radius: 12px;
     }
     &:after{
+        right: 0;
         content: '';
         bottom: 4px;
         position: absolute;
@@ -161,5 +168,130 @@
     }
     @media screen and (max-width: 790px){
         display: block;
+        margin-right: 16px;
+    }
+}
+.shadow{
+    display: none;
+}
+.header_mobile{
+    margin-top: 0;
+    padding-top: 43px;
+    background: #101923;
+    position: fixed;
+    display: block;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    .shadow{
+        display: block;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: -1;
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+    }
+    .header__logo{
+        top: 39px;
+        position: absolute;
+    }
+    .header__right{
+        margin: 0;
+        display: grid;
+        grid-row-gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, min-content);
+        .header__navigation-links{
+            margin: 0 auto;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            display: grid;
+            grid-row-gap: 25px;
+            .header__tel{
+                margin: 0 auto;
+                grid-column-start: 1;
+                grid-column-end: 5;
+                span{
+                    color: #fff;
+                }
+            }
+        }
+        .navigation{
+            width: 100%;
+            margin: 0 auto;
+            grid-template-columns: repeat(4, min-content);
+            grid-template-rows: repeat(2, min-content);
+            grid-gap: 15px;
+            padding-bottom: 0;
+            border: 0;
+            position: relative;
+            &:after{
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 105%;
+                position: absolute;
+                height: 1px;
+                background-color: #fff;
+                content: '';
+            }
+            .navigation__elem{
+                margin: 0 auto;
+            }
+            .navigation__elem_last{
+                grid-column-start: 1;
+                grid-column-end: 5;
+                margin: 0 auto;
+            }
+            a{
+                font-size: 14px;
+                line-height: 24px;
+                color: #FFFFFF;
+                white-space: nowrap;
+            }
+        }
+        .theme{
+            margin: 0 auto;
+            grid-column-start:2;
+            grid-column-end: 4;
+            align-items: center;
+            margin-top: 5px;
+            .moon{
+                path{
+                    fill: #fff;
+                    fill-opacity: 0.5;
+                }
+            }
+            .sun{
+                path{
+                    fill: #fff;
+                    fill-opacity: 1;
+                }
+            }
+        }
+        .language{
+            margin: 0 auto;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            span{
+                color: #fff;
+            }
+        }
+    }
+    .burger{
+        position: absolute;
+        right: 0;
+        top: 62px;
+        background-color: #fff;
+        &:after{
+            background-color: #fff;
+        }
+        &:before{
+            background-color: #fff;
+        }
     }
 }

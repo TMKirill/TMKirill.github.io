@@ -6,13 +6,40 @@ var answers = document.getElementsByClassName('faq__answer');
 var answer_down = document.getElementsByClassName('faq__down');
 var burger_button = document.getElementById('mobile-header');
 var header = document.getElementById('header');
-var sliders = document.getElementsByClassName('slider');
+const sliders = document.getElementsByClassName('slider');
 var sport = document.getElementsByClassName('sport__elem');
 var photos = document.getElementsByClassName('main-photo');
 setInterval(main_anim, 5000);
 var photo_number = 0;
 var currentSlides = Array(sliders.length);
 const window_width = window.matchMedia('screen and (max-width:900px)');
+
+Array.from(sliders).forEach(function(sl){
+    sl.addEventListener('touchstart', touch_point, false);
+    sl.addEventListener('touchmove', touch_move, false)
+})
+let x1 = null;
+
+console.log();
+
+function touch_point(event){
+    x1 = event.touches[0].clientX;
+}
+
+function touch_move(event){
+    if(!x1){
+        return false;
+    }
+    let x2 = event.touches[0].clientX;
+    let x_diff = x2 - x1;
+    if(x_diff > -120){
+        return false;
+    }
+    else{
+        slider_next_step(Array.from(sliders).indexOf(event.target.closest('.slider')));
+    }
+    x1 = null;
+}
 
 for (let i = 0; i < currentSlides.length; i++){
     currentSlides[i] = 0;
@@ -23,12 +50,12 @@ new AirDatepicker('#datepicker', {
 });
 
 function main_anim(){
-//    photos[photo_number].classList.remove('main-photo_first');
-//    photo_number++;
-//    if (photo_number > (photos.length - 1)){
-//        photo_number = 0;
-//    }
-//    photos[photo_number].classList.add('main-photo_first');
+    photos[photo_number].classList.remove('main-photo_first');
+    photo_number++;
+    if (photo_number > (photos.length - 1)){
+        photo_number = 0;
+    }
+    photos[photo_number].classList.add('main-photo_first');
 }
 
 function sports_more(index){

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>EKTA</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/choices.min.css">
     <link rel="stylesheet" href="assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -73,32 +74,138 @@
                 <p class="main-form__text">
                     У разі отримання спортивної травми. Ми гарантновано надамо медичну домогу та виплатимо компенсацію
                 </p>
-<!--
+               <div class="main-photo-outer">
                 <img src="assets/imgs/anim_form0.jpg" alt="" class="main-photo main-photo_first">
                        <img src="assets/imgs/anim_form1.jpg" alt="" class="main-photo">
-                       <img src="assets/imgs/anim_form2.jpg" alt="" class="main-photo">
--->
-                       </div>
-                        <form action="#" class="main-form__form first-form"><div class="main-form__right"></div>
+                          <div class="main-photo">
+                           <img src="assets/imgs/anim_form2.jpg" alt="" class="">
+                          <span>Страхування для спортсменів</span>
+                   </div></div></div>
+                       <div class="main-form__right">
+                        <form action="#" class="main-form__form">
+                        <div class="main-form__border"></div>
+                        <div class="first-form all-forms active-form">
                         <span class="first-form__header">Оформіть поліс онлайн</span>
                         <span class="first-form__discr">Територія дії полісу</span>
-                        <select type="text" placeholder="Виберіть територію"></select>
+                        <select name="" class="main-form__country main-form__select">
+                           <option value="">Виберіть територію</option>
+                            <option value="europe">Європа</option>
+                            <option value="world">Весь світ</option>
+                            <option value="ukraine">Україна</option>
+                        </select>
                         <span class="first-form__discr">Ваш вік</span>
                         <input type="text" placeholder="Введіть дату">
                         <span class="first-form__discr">Термін дії полісу</span>
                         <input type="text" placeholder="Введіть дату" id="datepicker">
                         <span class="first-form__discr">Покриття на сумму</span>
-                        <select type="text" placeholder="50 000 USD"></select>
+                        <select name="" class="main-form__cost main-form__select">
+                            <option value="50000">50000</option>
+                            <option value="100000">100000</option>
+                            <option value="200000">200000</option>
+                            <option value="1000000">1000000</option>
+                        </select>
                         <span class="first-form__discr">Вид спорту</span>
-                        <select type="select" placeholder="Виберіть спорт"></select>
-                        <span class="first-form__code">У вас есть промокод?</span>
+                        <select name="" class="main-form__sport main-form__select">
+                            <option value="1">Автомобільний спорт на спеціальних трасах</option>
+                            <option value="2">Армреслінг</option>
+                            <option value="3">Банджі-джампінг, роуп-джампінг та інші види тарзанок</option>
+                            <option value="4">Бейсджампінг</option>
+                            <option value="5">Білдеринг</option>
+                            <option value="6">Бобслей</option>
+                            <option value="7">Вейкборд</option>
+                            <option value="8">Велосипедний спорт (включно з мотокросом, шосейним, bmx, треком, маунтинбайком, тріалом)</option>
+                            <option value="9">Вінгсьют</option>
+                            <option value="10">Каньйонінг</option>
+                            <option value="11">Гірські лижі та сноуборд поза облаштованими або маркованими трасами (включно з фрирайдом та хелі-скі)</option>
+                            <option value="12">Єдиноборства (включно з будь-якими видами боксу та боротьби)</option>
+                            <option value="13">Зорбінг</option>
+                            <option value="14">Кліфдайвінг</option>
+                            <option value="15">Маунтинборд</option>
+                            <option value="16">Полювання із застосуванням будь-якого виду зброї</option>
+                            <option value="17">Параглайдинг</option>
+                            <option value="18">Паркур і фриран</option>
+                            <option value="19">Рафтинг</option>
+                            <option value="20">Родео (булрайдинг)</option>
+                            <option value="21">Ролерблейдинг</option>
+                            <option value="22">Руфінг</option>
+                            <option value="23">Скайсерфінг</option>
+                            <option value="24">Спуск на тролеї (тросі)</option>
+                            <option value="25">Стритлагінг</option>
+                            <option value="26">Флайборд</option>
+                            <option value="27">Фристайл (гірськолижний і сноубордичний)</option>
+                            <option value="28">Бокінг</option>
+                            <option value="29">Пого-стік
+</option>
+                            <option value="30">Фігурне катання</option>
+                            <option value="31">Кайтинг (включно з кайтсерфінгом та сноукайтингом)</option>
+                            <option value="32">Хокей</option>
+                            <option value="33">Крикет</option>
+                            <option value="34">Фрісбі </option>
+                            <option value="35">Картінг</option>
+                            <option value="36">Фехтування </option>
+                            <option value="37">Тріатлон </option>
+                            <option value="38">Серфінг</option>
+                            <option value="39">Лонгборд, скейтбординг</option>
+                            <option value="40">Джип-сафарі</option>
+                            <option value="41">Дігерство</option>
+                            <option value="42">Трекінг</option>
+                            <option value="43">Пейнтбол</option>
+                            <option value="44">Спортивні та бальні танці</option>
+                            <option value="45">Важка атлетика </option>
+                        </select>
+                        <button id="first-form__code" onclick="promo_add()" type="button"><span>У вас есть промокод?</span></button>
+                        <input type="text" placeholder="Ввести промокод" id="first-form__promo">
                         <div class="main-form-checkbox-outer">
                         <input type="checkbox">
                         <span>Приймаю умови договору</span>
-                </div>
-                        <input type="submit" value="Далі"></form>
+                        </div>
+                        </div>
+<!--                        next form-->
+                       <div class="second-form all-forms">
+                        <span class="first-form__header">Особиста інформація</span>
+                        <span class="first-form__discr">Ім'я</span>
+                        <input type="text" placeholder="Введіть ім’я">
+                        <span class="first-form__discr">Прізвище</span>
+                        <input type="text" placeholder="Введіть прізвище">
+                        <span class="first-form__discr">Номер телефону</span>
+                        <input type="text" placeholder="Введіть номер телефону">
+                        <span class="first-form__discr">Email </span>
+                        <input type="text" placeholder="Введіть E-mail">
+                        <span class="first-form__discr">Паспорт </span>
+                        <input type="text" placeholder="Введіть паспорт">
+                        <span class="first-form__discr">Дата народження</span>
+                        <input type="text" placeholder="Введіть дату народження">
+                        </div>
+<!--                        next form-->
+                       <div class="second-form all-forms">
+                        <span class="first-form__header">Особиста інформація</span>
+                        <span class="first-form__discr">Ім'я</span>
+                        <input type="text" placeholder="Введіть ім’я">
+                        <span class="first-form__discr">Прізвище</span>
+                        <input type="text" placeholder="Введіть прізвище">
+                        <span class="first-form__discr">Номер телефону</span>
+                        <input type="text" placeholder="Введіть номер телефону">
+                        <span class="first-form__discr">Email </span>
+                        <input type="text" placeholder="Введіть E-mail">
+                        <span class="first-form__discr">Паспорт </span>
+                        <input type="text" placeholder="Введіть паспорт">
+                        <span class="first-form__discr">Дата народження</span>
+                        <input type="text" placeholder="Введіть дату народження">
+                        </div>
+<!--                        next form-->
+                       <div class="last-form all-forms">
+                       
+                       </div>
+                        <button onclick="form_next()" class="main-form__next" type="button" >
+                            Далі
+                        </button>
+                        <button onclick="form_prev()" class="main-form__prev" type="button">Назад
+                        </button></form>
+                        </div>
             </section>
             <section class="programm">
+               <div class="programm__wrapper">
+                   
                 <h2>Програма <span>страхування</span></h2>
                 <div class="programm__conteiner">
                   <div class="programm__elem-wrapper">
@@ -145,9 +252,12 @@
                 <div class="programm__atantion">
                     <img src="assets/imgs/atantion.svg" alt="">
                     <p>Якщо у вас стався нещасний випадок, ми потурбуємося про ваше лікування: швидко знайдемо найближчу лікарню, організуємо транспортування туди, оформимо депозит для надання медичних послуг та оплатимо всі необхідні ліки</p>
-                </div>
+                </div></div><div class="programm__order-outer">
+                <button class="programm__order">
+               <span>Оформити</span></button></div>
             </section>
             <section class="step-slider">
+            <p class="slider-header">Як оформити страховку для <span>екстремального</span> спорту?</p>
                 <div class="slider">
                     <div class="slider__elem_visible slider__elem slider__elem_active">
                           <div class="slider__text-outer">
@@ -325,162 +435,162 @@
                 </div>
             </section>
             <section class="recomends">
+               <p class="slider-header">Відгуки наших <span>клієнтів</span></p>
                 <div class="slider">
                     <div class="slider__elem_visible slider__elem slider__elem_active">
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Юрий</span> Кульченко</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/1.png" alt=""></div>
                     <div class="recomends__text">
-                        С друзьями любим кататься по горным склонам. 
+                        <p>С друзьями любим кататься по горным склонам. 
                         Самую большую опасность представляет высокая вероятность схода лавины. 
-                        Там, где мы заказываем путевку, почему то не предоставляют такой вид... <a href="#">Показать полностью</a>
+                        Там, где мы заказываем путевку, почему то не предоставляют такой вид... </p><a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem_visible slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/green_logo.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/green_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Ирина</span> Данченко</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/2.png" alt=""></div>
                     <div class="recomends__text">
-                        Я катаюсь на лыжах каждый сезон.  Страховку всегда оформляю в ЕКТА. В компанию обращалась только один раз, когда сильно подвернула ногу. Оператор сразу же ответил. Понравилось, что можно общаться... <a href="#">Показать полностью</a>
+                        <p>Я катаюсь на лыжах каждый сезон.  Страховку всегда оформляю в ЕКТА. В компанию обращалась только один раз, когда сильно подвернула ногу. Оператор сразу же ответил. Понравилось, что можно общаться...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem_visible slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/facebook.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/blue_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Сергей</span> Шишковский</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/3.png" alt=""></div>
                     <div class="recomends__text">
-                        Пришлось покупать страховку для прыжка с парашюта. Знакомый посоветовал, сказал, что страхуют экстремалов. Страховку сравнивал по цене 
-и по наполнению продукта. Было пару вопрос по поводу страхо... <a href="#">Показать полностью</a>
+                        <p>Пришлось покупать страховку для прыжка с парашюта. Знакомый посоветовал, сказал, что страхуют экстремалов. Страховку сравнивал по цене 
+                            и по наполнению продукта. Было пару вопрос по поводу страхо...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem_visible slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/green_logo.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/green_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Дмитрий</span> Миц</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/4.png" alt=""></div>
-                    <div class="recomends__text">Я уже давно занимаюсь рафтингом. Для себя выбрал страховую ЕКТА. Страхуют именно экстремальный вид спорта. Проблем с сервисом никогда не было. Когда были вопросы, в поддержке быстро отвечали... <a href="#">Показать полностью</a>
+                    <div class="recomends__text"><p>Я уже давно занимаюсь рафтингом. Для себя выбрал страховую ЕКТА. Страхуют именно экстремальный вид спорта. Проблем с сервисом никогда не было. Когда были вопросы, в поддержке быстро отвечали...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Марина</span> Корсун</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/5.png" alt=""></div>
                     <div class="recomends__text">
-                        Покупка экстремальной страховки заняла  буквально 5-10 минут. Ехали кататься на лыжах. Полис получила на почту. Все очень удобно и просто, замечаний никаких нет. Со страховкой намного спокойней было отдыхать
+                        <p>Покупка экстремальной страховки заняла  буквально 5-10 минут. Ехали кататься на лыжах. Полис получила на почту. Все очень удобно и просто, замечаний никаких нет. Со страховкой намного спокойней было отдыхать</p>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/green_logo.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/green_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Наталья</span> Кушнир</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/6.png" alt=""></div>
                     <div class="recomends__text">
-                        Брала страховку для экстремального спорта – скалолазания, все прошло без приключений, страховка не понадобилась. Оформление заняло всего пару минут, проблем никаких не возникло
+                        <p>Брала страховку для экстремального спорта – скалолазания, все прошло без приключений, страховка не понадобилась. Оформление заняло всего пару минут, проблем никаких не возникло</p>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
-                    <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/blue_stars.png" alt=""></div>
+                    <img src="assets/imgs/recomends/facebook.png" alt="" class="recomends__icon"><div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/blue_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Александр</span> Холодов</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/7.png" alt=""></div>
                     <div class="recomends__text">
-                        Рад что оформил экстремальную страховку в ЕКТА, пришлось воспользоваться полисом! Один неудачный склон, и ты уже с травмой. Менеджер ответил сразу же, постоянно был на связи в вайбере. В больнице оказали первую... <a href="#">Показать полностью</a>
+                        <p>Рад что оформил экстремальную страховку в ЕКТА, пришлось воспользоваться полисом! Один неудачный склон, и ты уже с травмой. Менеджер ответил сразу же, постоянно был на связи в вайбере. В больнице оказали первую...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Сергей</span> Куцюба</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/8.png" alt=""></div>
                     <div class="recomends__text">
-                        Прошлой зимой катались с девушкой на сноуборде, оформили  страховку в последний момент. Перешел по рекламе о страховании экстремального спорта, без проблем оформил страховку на двоих... <a href="#">Показать полностью</a>
+                        <p>Прошлой зимой катались с девушкой на сноуборде, оформили  страховку в последний момент. Перешел по рекламе о страховании экстремального спорта, без проблем оформил страховку на двоих...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/facebook.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/blue_stars.png" alt=""></div>
-                    <span class="recomends__name"><span>Алина</span>  Диденко</span>
+                    <span class="recomends__name"><span>Алина</span> Диденко</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/9.png" alt=""></div>
                     <div class="recomends__text">
-                        Оформляла страховку для экстремального спорта уже три раза, но воспользоваться пришлось только один раз, когда сломала руку. Сначала думала, что страховка не поможет, но все-таки написала в телеграмм. Мне быстро... <a href="#">Показать полностью</a>
+                        <p>Оформляла страховку для экстремального спорта уже три раза, но воспользоваться пришлось только один раз, когда сломала руку. Сначала думала, что страховка не поможет, но все-таки написала в телеграмм. Мне быстро...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Илья</span> Тугай</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/10.png" alt=""></div>
                     <div class="recomends__text">
-                        В декабре брал страховку перед поездкой, ехали отдыхать с друзьями. Оформлял специально для экстремального вида спорта. Цена адекватная, дешевле, чем у других страховых, и наполнение лучше. Пришлось обратиться 
-                        с вывихом... <a href="#">Показать полностью</a>
+                        <p>В декабре брал страховку перед поездкой, ехали отдыхать с друзьями. Оформлял специально для экстремального вида спорта. Цена адекватная, дешевле, чем у других страховых, и наполнение лучше. Пришлось обратиться 
+                            с вывихом...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Михаил</span> Тимченко</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/11.png" alt=""></div>
                     <div class="recomends__text">
-                        Много раз оформлял в ЕКТА страховку для экстремального вида спорта. В этой поездке пришлось воспользоваться. Когда катались на сноуборде, я подвернул ногу. Очень благодарен компании за то, что оказали... <a href="#">Показать полностью</a>
+                        <p>Много раз оформлял в ЕКТА страховку для экстремального вида спорта. В этой поездке пришлось воспользоваться. Когда катались на сноуборде, я подвернул ногу. Очень благодарен компании за то, что оказали...</p> <a href="#">Показать полностью</a>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/google.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/yellow_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Антон</span> Фломиев</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/12.png" alt=""></div>
                     <div class="recomends__text">
-                        Страховой случай случился на Бали, когда занимались серфингом. Компания без каких-либо проблем оплатила лечение и проезд на такси до больницы. Могу сказать только одно – страховкой доволен
+                        <p>Страховой случай случился на Бали, когда занимались серфингом. Компания без каких-либо проблем оплатила лечение и проезд на такси до больницы. Могу сказать только одно – страховкой доволен</p>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
                     <div class="slider__elem">
                         
-                    <img src="" alt="" class="recomends__icon">
+                    <img src="assets/imgs/recomends/facebook.png" alt="" class="recomends__icon">
                     <div class="recomends__rate"><span>FEEDBACK</span><img src="assets/imgs/recomends/blue_stars.png" alt=""></div>
                     <span class="recomends__name"><span>Валерий</span> Костенко</span>
                     <div class="recomends__img-outer">
                     <img src="assets/imgs/recomends/13.png" alt=""></div>
                     <div class="recomends__text">
-                        Если ищете себе страховку для экстремального спорта, смело можете оформлять в ЕКТА. Это уже проверенная компания. Не первый раз страхуюсь,  и уже дважды мне помогли
+                        <p>Если ищете себе страховку для экстремального спорта, смело можете оформлять в ЕКТА. Это уже проверенная компания. Не первый раз страхуюсь,  и уже дважды мне помогли</p>
                     </div>
                     <button onclick="slider_next_step(1)"><span>Прочитати</span><img src="assets/imgs/sports_more.svg" alt=""></button>
                     </div>
@@ -547,7 +657,9 @@
         </div>
     </footer>    
     </div>
-    <script src='assets/js/air-datepicker.js'></script>
+    <script src="assets/js/choices.min.js"></script>
+    <script src="assets/js/air-datepicker.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/form.js"></script>
 </body>
 </html>

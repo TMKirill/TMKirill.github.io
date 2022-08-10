@@ -8,9 +8,6 @@ var burger_button = document.getElementById('mobile-header');
 var header = document.getElementById('header');
 const sliders = document.getElementsByClassName('slider');
 var sport = document.getElementsByClassName('sport__elem');
-var photos = document.getElementsByClassName('main-photo');
-setInterval(main_anim, 5000);
-var photo_number = 0;
 var currentSlides = Array(sliders.length);
 const window_width = window.matchMedia('screen and (max-width:900px)');
 
@@ -43,19 +40,6 @@ function touch_move(event){
 
 for (let i = 0; i < currentSlides.length; i++){
     currentSlides[i] = 0;
-}
-new AirDatepicker('#datepicker', {
-    range: true,
-    multipleDatesSeparator: ' - ',
-});
-
-function main_anim(){
-    photos[photo_number].classList.remove('main-photo_first');
-    photo_number++;
-    if (photo_number > (photos.length - 1)){
-        photo_number = 0;
-    }
-    photos[photo_number].classList.add('main-photo_first');
 }
 
 function sports_more(index){

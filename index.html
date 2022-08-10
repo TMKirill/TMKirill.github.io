@@ -75,37 +75,39 @@
                     У разі отримання спортивної травми. Ми гарантновано надамо медичну домогу та виплатимо компенсацію
                 </p>
                <div class="main-photo-outer">
-                <img src="assets/imgs/anim_form0.jpg" alt="" class="main-photo main-photo_first">
-                       <img src="assets/imgs/anim_form1.jpg" alt="" class="main-photo">
+               <div class="main-photo">
+                <img src="assets/imgs/anim_form0.jpg" alt=""></div>
+                      <div class="main-photo">
+                       <img src="assets/imgs/anim_form1.jpg" alt=""></div>
                           <div class="main-photo">
-                           <img src="assets/imgs/anim_form2.jpg" alt="" class="">
+                           <img src="assets/imgs/anim_form2.jpg" class="main-photo_last-photo" alt="">
                           <span>Страхування для спортсменів</span>
                    </div></div></div>
                        <div class="main-form__right">
                         <form action="#" class="main-form__form">
                         <div class="main-form__border"></div>
                         <div class="first-form all-forms active-form">
+                        <span class="form-number">01</span>
                         <span class="first-form__header">Оформіть поліс онлайн</span>
                         <span class="first-form__discr">Територія дії полісу</span>
-                        <select name="" class="main-form__country main-form__select">
-                           <option value="">Виберіть територію</option>
+                        <select name="countrySelect" class="main-form__country main-form__select">
+                            <option value="ukraine">Україна</option>
                             <option value="europe">Європа</option>
                             <option value="world">Весь світ</option>
-                            <option value="ukraine">Україна</option>
                         </select>
                         <span class="first-form__discr">Ваш вік</span>
-                        <input type="text" placeholder="Введіть дату">
+                        <input type="text" name="age" placeholder="Введіть вік">
                         <span class="first-form__discr">Термін дії полісу</span>
-                        <input type="text" placeholder="Введіть дату" id="datepicker">
+                        <input type="text" name="timeRange" placeholder="Введіть дату" id="datepicker">
                         <span class="first-form__discr">Покриття на сумму</span>
-                        <select name="" class="main-form__cost main-form__select">
+                        <select name="costSelect" class="main-form__cost main-form__select">
                             <option value="50000">50000</option>
                             <option value="100000">100000</option>
                             <option value="200000">200000</option>
                             <option value="1000000">1000000</option>
                         </select>
                         <span class="first-form__discr">Вид спорту</span>
-                        <select name="" class="main-form__sport main-form__select">
+                        <select name="sportSelect" class="main-form__sport main-form__select">
                             <option value="1">Автомобільний спорт на спеціальних трасах</option>
                             <option value="2">Армреслінг</option>
                             <option value="3">Банджі-джампінг, роуп-джампінг та інші види тарзанок</option>
@@ -154,47 +156,68 @@
                             <option value="45">Важка атлетика </option>
                         </select>
                         <button id="first-form__code" onclick="promo_add()" type="button"><span>У вас есть промокод?</span></button>
-                        <input type="text" placeholder="Ввести промокод" id="first-form__promo">
+                        <input type="text" name="promocode" placeholder="Ввести промокод" id="first-form__promo">
                         <div class="main-form-checkbox-outer">
-                        <input type="checkbox">
+                        <input type="checkbox" name="agree">
                         <span>Приймаю умови договору</span>
                         </div>
                         </div>
 <!--                        next form-->
                        <div class="second-form all-forms">
+                       <span class="form-number">02</span>
                         <span class="first-form__header">Особиста інформація</span>
+                        <p class="second-form__customer">Покупець:</p>
+                        <p class="second-form__passport">Введіть прізвище та ім'я латинкою, як у закордонному паспорті</p>
                         <span class="first-form__discr">Ім'я</span>
-                        <input type="text" placeholder="Введіть ім’я">
+                        <input type="text" name="name" placeholder="Введіть ім’я">
                         <span class="first-form__discr">Прізвище</span>
-                        <input type="text" placeholder="Введіть прізвище">
+                        <input type="text" name="surname" placeholder="Введіть прізвище">
                         <span class="first-form__discr">Номер телефону</span>
-                        <input type="text" placeholder="Введіть номер телефону">
+                        <input type="text" name="number" placeholder="Введіть номер телефону">
                         <span class="first-form__discr">Email </span>
-                        <input type="text" placeholder="Введіть E-mail">
+                        <input type="email" name="email" placeholder="Введіть E-mail">
                         <span class="first-form__discr">Паспорт </span>
-                        <input type="text" placeholder="Введіть паспорт">
+                        <input type="text" name="passport" placeholder="Введіть паспорт">
                         <span class="first-form__discr">Дата народження</span>
-                        <input type="text" placeholder="Введіть дату народження">
+                        <input type="text" name="birthday" placeholder="Введіть дату народження">
+                        <div class="second-form__more-people-outer">
+                            <div class="second-form__more-people-wrapper">
+                                <button type="button" class="second-form__more-people" onclick="more_people(0)"><span>+Додати учасника</span>
+                                <img src="assets/imgs/close.svg" alt="#" class="second-form__more-people-img">
+                                </button>
+                            </div>
+                        </div>
                         </div>
 <!--                        next form-->
-                       <div class="second-form all-forms">
-                        <span class="first-form__header">Особиста інформація</span>
+                       <div class="third-form all-forms">
+                       <span class="form-number">03</span>
+                        <span class="first-form__header">Перевірка особистої інформації </span>
                         <span class="first-form__discr">Ім'я</span>
-                        <input type="text" placeholder="Введіть ім’я">
+                        <input type="text" name="nameCheck" placeholder="Введіть ім’я">
                         <span class="first-form__discr">Прізвище</span>
-                        <input type="text" placeholder="Введіть прізвище">
+                        <input type="text" name="surnameCheck" placeholder="Введіть прізвище">
                         <span class="first-form__discr">Номер телефону</span>
-                        <input type="text" placeholder="Введіть номер телефону">
+                        <input type="text" name="numberCheck" placeholder="Введіть номер телефону">
                         <span class="first-form__discr">Email </span>
-                        <input type="text" placeholder="Введіть E-mail">
+                        <input type="email" name="emailCheck" placeholder="Введіть E-mail">
                         <span class="first-form__discr">Паспорт </span>
-                        <input type="text" placeholder="Введіть паспорт">
+                        <input type="text" name="passportCheck" placeholder="Введіть паспорт">
                         <span class="first-form__discr">Дата народження</span>
-                        <input type="text" placeholder="Введіть дату народження">
+                        <input type="text" name="birthdayCheck" placeholder="Введіть дату народження">
                         </div>
 <!--                        next form-->
                        <div class="last-form all-forms">
-                       
+                         <span class="form-number">04</span>
+                          <p class="last-form__header">Введіть дані вашої банківської картки</p>
+                           <div class="last-form__outer">
+                           <input type="text" name="cardNumber" class="last-form__number" placeholder="Введіть номер картки">
+                           <input type="text" name="cardTerm" placeholder="MM/YY" class="last-form__term">
+                           <input type="password" name="cardCVV" placeholder="CVV" class="last-form__svv">
+                           </div>
+                           <div class="last-form__pay-outer">
+                           <button><img src="assets/imgs/apple_pay.svg" alt=""></button>
+                           <button><img src="assets/imgs/google_pay.svg" alt=""></button>
+                           </div>
                        </div>
                         <button onclick="form_next()" class="main-form__next" type="button" >
                             Далі
@@ -661,5 +684,6 @@
     <script src="assets/js/air-datepicker.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form.js"></script>
+    <script src="assets/js/anim.js"></script>
 </body>
 </html>

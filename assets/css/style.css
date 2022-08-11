@@ -63,7 +63,7 @@
 .trigger {
   margin: 0 10px 0 8px;
   position: relative;
-  width: 35px;
+  width: 36px;
   height: 20px;
   background: #1151F3;
   border-radius: 17.5px;
@@ -76,6 +76,19 @@
   height: 16px;
   background: #FFFFFF;
   border-radius: 12.5px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+.trigger .trigger__inner_right {
+  position: absolute;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border-radius: 12.5px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  left: 18px;
 }
 
 .language {
@@ -230,13 +243,13 @@
 }
 .header_mobile .shadow {
   display: block;
-  top: 0;
+  top: 100%;
   left: 0;
-  position: fixed;
-  z-index: -1;
+  position: absolute;
+  z-index: -100;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
+  height: 2000px;
+  width: inherit;
 }
 .header_mobile .header__logo {
   top: 39px;
@@ -1042,8 +1055,9 @@ main {
 .main-form__form-thanks {
   margin-top: 0;
   margin-left: 0;
-  max-width: 500px;
+  max-width: 420px;
   margin: 0 auto;
+  position: relative;
 }
 
 .main-form {
@@ -1508,6 +1522,11 @@ main {
 .programm .programm__conteiner .programm__elem-outer .programm__other_show {
   display: block;
 }
+@media screen and (max-width: 900px) {
+  .programm .programm__conteiner .programm__elem-outer .programm__other_show {
+    padding-bottom: 10px;
+  }
+}
 .programm .programm__conteiner .programm__elem-outer .programm__other_show li {
   font-weight: 400;
   font-size: 16px;
@@ -1568,6 +1587,9 @@ main {
     font-size: 14px;
     line-height: 26px;
   }
+}
+.programm .programm__atantion svg {
+  overflow: visible;
 }
 @media screen and (max-width: 900px) {
   .programm .programm__atantion {
@@ -1769,7 +1791,6 @@ main {
   font-size: 18px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #1C2B39;
 }
 .what-doing .what-doing__main .what_doing__elem .what_doing__elem-header span {
   color: rgb(45, 100, 244);
@@ -2511,7 +2532,6 @@ main {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #1C2B39;
   white-space: nowrap;
   position: absolute;
   top: -30px;
@@ -2794,4 +2814,42 @@ main {
   margin-top: 5px;
   width: 100%;
   text-align: center;
+  font-weight: 500;
+}
+.thanks__no-message a {
+  font-size: 18px;
+  line-height: 34px;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #2D64F4;
+}
+
+.thanks__all {
+  position: absolute;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+  width: 300px;
+  color: rgba(45, 100, 244, 0.1);
+  top: -15px;
+  left: -340px;
+}
+@media screen and (max-width: 900px) {
+  .thanks__all {
+    display: none;
+  }
+}
+
+.thanks__sell {
+  position: absolute;
+  z-index: -1;
+  right: -250px;
+  top: 250px;
+}
+@media screen and (max-width: 900px) {
+  .thanks__sell {
+    display: none;
+  }
 }

@@ -10,6 +10,7 @@ const sliders = document.getElementsByClassName('slider');
 var sport = document.getElementsByClassName('sport__elem');
 var currentSlides = Array(sliders.length);
 const window_width = window.matchMedia('screen and (max-width:900px)');
+const theme_chenger = document.querySelector('.trigger__inner');
 
 Array.from(sliders).forEach(function(sl){
     sl.addEventListener('touchstart', touch_point, false);
@@ -17,7 +18,16 @@ Array.from(sliders).forEach(function(sl){
 })
 let x1 = null;
 
-console.log();
+function theme_change(){
+    if(theme_chenger.classList.contains('trigger__inner_right') == false){
+        theme_chenger.classList = 'trigger__inner_right';
+        document.getElementById('theme-selector').href = 'assets/css/dark.css';
+    }
+    else{
+        theme_chenger.classList = 'trigger__inner';
+        document.getElementById('theme-selector').href = 'assets/css/light.css';
+    }
+}
 
 function touch_point(event){
     x1 = event.touches[0].clientX;

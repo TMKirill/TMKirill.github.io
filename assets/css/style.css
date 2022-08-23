@@ -890,9 +890,29 @@ main {
   padding: 7px 15px;
   margin-top: 2px;
   margin-bottom: 15px;
-  font-weight: 400;
+  color: #2D64F4;
+  font-weight: 600;
   font-size: 16px;
   line-height: 30px;
+}
+.main-form__form .first-form input[type=text]::-webkit-input-placeholder, .main-form__form .first-form input[type=email]::-webkit-input-placeholder, .main-form__form .second-form input[type=text]::-webkit-input-placeholder, .main-form__form .second-form input[type=email]::-webkit-input-placeholder, .main-form__form .third-form input[type=text]::-webkit-input-placeholder, .main-form__form .third-form input[type=email]::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #C7C7C7;
+}
+.main-form__form .first-form input[type=text]::-moz-placeholder, .main-form__form .first-form input[type=email]::-moz-placeholder, .main-form__form .second-form input[type=text]::-moz-placeholder, .main-form__form .second-form input[type=email]::-moz-placeholder, .main-form__form .third-form input[type=text]::-moz-placeholder, .main-form__form .third-form input[type=email]::-moz-placeholder {
+  font-weight: 400;
+  color: #C7C7C7;
+}
+.main-form__form .first-form input[type=text]:-ms-input-placeholder, .main-form__form .first-form input[type=email]:-ms-input-placeholder, .main-form__form .second-form input[type=text]:-ms-input-placeholder, .main-form__form .second-form input[type=email]:-ms-input-placeholder, .main-form__form .third-form input[type=text]:-ms-input-placeholder, .main-form__form .third-form input[type=email]:-ms-input-placeholder {
+  font-weight: 400;
+  color: #C7C7C7;
+}
+.main-form__form .first-form input[type=text]::-ms-input-placeholder, .main-form__form .first-form input[type=email]::-ms-input-placeholder, .main-form__form .second-form input[type=text]::-ms-input-placeholder, .main-form__form .second-form input[type=email]::-ms-input-placeholder, .main-form__form .third-form input[type=text]::-ms-input-placeholder, .main-form__form .third-form input[type=email]::-ms-input-placeholder {
+  font-weight: 400;
+  color: #C7C7C7;
+}
+.main-form__form .first-form input[type=text]::placeholder, .main-form__form .first-form input[type=email]::placeholder, .main-form__form .second-form input[type=text]::placeholder, .main-form__form .second-form input[type=email]::placeholder, .main-form__form .third-form input[type=text]::placeholder, .main-form__form .third-form input[type=email]::placeholder {
+  font-weight: 400;
   color: #C7C7C7;
 }
 @media screen and (max-width: 900px) {
@@ -900,10 +920,6 @@ main {
     font-size: 14px;
     line-height: 26px;
   }
-}
-.main-form__form .third-form input[type=text], .main-form__form .third-form input[type=email] {
-  color: #2D64F4;
-  font-weight: 500;
 }
 .main-form__form .third-form .third-form__more-people {
   margin-top: 30px;
@@ -1517,10 +1533,17 @@ main {
   }
 }
 .programm .programm__conteiner .programm__elem-outer .programm__other {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+}
+.programm .programm__conteiner .programm__elem-outer .programm__other li {
+  line-height: 0;
+  font-size: 0;
 }
 .programm .programm__conteiner .programm__elem-outer .programm__other_show {
-  display: block;
+  max-height: 300px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 @media screen and (max-width: 900px) {
   .programm .programm__conteiner .programm__elem-outer .programm__other_show {
@@ -1528,6 +1551,8 @@ main {
   }
 }
 .programm .programm__conteiner .programm__elem-outer .programm__other_show li {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
@@ -2368,6 +2393,12 @@ main {
   border: 0;
   background-color: rgba(0, 0, 0, 0);
 }
+.slider .slider__elem_visible .slider__next-button button svg {
+  margin-left: 15px;
+}
+.slider .slider__elem_visible .slider__next-button button svg path {
+  fill: #2E3A59;
+}
 .slider .slider__elem_active {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -2682,6 +2713,12 @@ main {
   color: #1C2B39;
   text-align: center;
 }
+@media screen and (max-width: 900px) {
+  .one-time {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
 
 .thanks-header {
   max-width: 550px;
@@ -2697,6 +2734,13 @@ main {
 }
 .thanks-header span {
   color: #2D64F4;
+}
+@media screen and (max-width: 900px) {
+  .thanks-header {
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
 }
 
 .present {
@@ -2770,6 +2814,54 @@ main {
   -ms-grid-row-span: 2;
   grid-row-end: 3;
 }
+@media screen and (max-width: 900px) {
+  .present {
+    padding: 30px 15px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: (-webkit-min-content)[3];
+    -ms-grid-rows: (min-content)[3];
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+  }
+  .present > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .present > *:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .present > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .present svg {
+    -ms-grid-column: 0;
+        grid-column-start: 0;
+    -ms-grid-column-span: 1;
+    grid-column-end: 1;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 3;
+    margin: 0 auto;
+    margin-top: 26px;
+    margin-bottom: 25px;
+    width: 86px;
+    height: 97px;
+  }
+  .present .present__header {
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+  }
+  .present .present__text {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
 
 .thanks__message {
   margin-top: 108px;
@@ -2782,6 +2874,15 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .thanks__message {
+    margin-top: 88px;
+  }
+  .thanks__message svg {
+    height: 99px;
+    width: 99px;
+  }
 }
 
 .thanks__what-doing {
@@ -2798,6 +2899,12 @@ main {
 .thanks__what-doing span {
   color: #2D64F4;
 }
+@media screen and (max-width: 900px) {
+  .thanks__what-doing {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
 
 .thanks__text {
   margin: 0 auto;
@@ -2808,6 +2915,12 @@ main {
   line-height: 34px;
   text-align: center;
   color: #1C2B39;
+}
+@media screen and (max-width: 900px) {
+  .thanks__text {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 
 .thanks__no-message {
@@ -2823,6 +2936,15 @@ main {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2D64F4;
+}
+@media screen and (max-width: 900px) {
+  .thanks__no-message {
+    margin-top: 8px;
+  }
+  .thanks__no-message a {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 
 .thanks__all {

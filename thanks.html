@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/choices.min.css">
     <link rel="stylesheet" href="assets/css/air-datepicker.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" id="theme-selector" href="assets/css/light.css">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -26,7 +26,7 @@
 </clipPath>
 </defs>
 </svg>
-                    <div class="trigger">
+                    <div class="trigger" onclick="theme_change()">
                         <div class="trigger__inner">
                             
                         </div>
@@ -39,7 +39,7 @@
 </svg>
 
                 </div>
-                <div class="language">
+                <div class="language" onclick="language_more()">
                     <img class="language__flag" src="assets/imgs/flags/Ukraine.svg" alt="">
                     <span>UA</span>
                     <div class="language__other" id="language">
@@ -48,7 +48,7 @@
                         <img class="language__flag" src="assets/imgs/flags/England.svg" alt="">
                         <span>EN</span>
                     </div>    
-                    <img onclick="language_more()" id="language_button" class="language__arrow" src="assets/imgs/down_arrow.svg" alt="">
+                    <img id="language_button" class="language__arrow" src="assets/imgs/down_arrow.svg" alt="">
                 </div>
                    <div class="header__navigation-links">
                     <nav class="navigation">

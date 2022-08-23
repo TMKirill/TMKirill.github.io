@@ -143,10 +143,12 @@
 }
 .present svg path {
   fill: rgba(45, 100, 244, 0.2);
+  fill-opacity: 1;
 }
 
 .thanks__message path {
   fill: rgba(45, 100, 244, 0.2);
+  fill-opacity: 1;
 }
 
 .thanks__what-doing {

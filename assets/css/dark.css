@@ -39,6 +39,9 @@ body {
 .main-form .main-form__left .main-form__text {
   color: #fff;
 }
+.main-form .main-form__left .main-photo_first span {
+  color: rgba(255, 255, 255, 0.1);
+}
 
 .what-doing h2 {
   color: #fff;
@@ -116,6 +119,9 @@ body {
 .slider .slider__elem_visible .slider__next-button button span {
   color: #fff;
 }
+.slider .slider__elem_visible .slider__next-button button svg path {
+  fill: #2D64F4;
+}
 .slider .slider__elem_active {
   background: rgba(255, 255, 255, 0.15);
 }
@@ -127,6 +133,9 @@ body {
 }
 .slider .slider__elem_active .slider__text-outer .slider__text3 {
   color: #fff;
+}
+.slider .slider__elem_active .slider__next-button button svg path {
+  fill: #FFFFFF;
 }
 
 .recomends .slider__elem_visible .recomends__name {

@@ -11,10 +11,12 @@ var sport = document.getElementsByClassName('sport__elem');
 var currentSlides = Array(sliders.length);
 const window_width = window.matchMedia('screen and (max-width:900px)');
 const theme_chenger = document.querySelector('.trigger__inner');
+const ididi = document.getElementById('sports');
+console.log(ididi.offsetTop);
 
 Array.from(sliders).forEach(function(sl){
-    sl.addEventListener('touchstart', touch_point, false);
-    sl.addEventListener('touchmove', touch_move, false)
+    sl.addEventListener('touchstart', touch_point, false, {passive: true});
+    sl.addEventListener('touchmove', touch_move, false, {passive: true})
 })
 let x1 = null;
 
@@ -189,5 +191,28 @@ function arrow_adder(window_width){
         }
     }
 }
-arrow_adder(window_width)
-window_width.addListener(arrow_adder)
+arrow_adder(window_width);
+window_width.addListener(arrow_adder);
+
+document.querySelectorAll('.navigation a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+ 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+$('.navigation a').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 1000,   // по умолчанию «400» 
+        easing: "linear" // по умолчанию «swing» 
+    });
+
+    return false;
+});

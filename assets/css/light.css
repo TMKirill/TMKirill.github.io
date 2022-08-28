@@ -113,6 +113,12 @@
 .slider .slider__elem_active .slider__text-outer .slider__text3 {
   color: #1C2B39;
 }
+.slider .slider__elem_active .slider__next-button button span {
+  color: #1C2B39;
+}
+.slider .slider__elem_active .slider__next-button button svg path {
+  fill: #2E3A59;
+}
 
 .recomends .slider__elem_visible .recomends__name {
   color: #1C2B39;
@@ -273,4 +279,7 @@
 }
 .main-form .main-form__left .main-form__text {
   color: #1C2B39;
+}
+.main-form .main-form__left .main-photo_first span {
+  color: rgba(45, 100, 244, 0.1);
 }

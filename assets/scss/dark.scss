@@ -49,6 +49,11 @@ body{
         .main-form__text{
             color: #fff;
         }
+        .main-photo_first{
+            span{
+                color: rgba(255, 255, 255, 0.1);
+            }
+        }
     }
 }
 .what-doing{
@@ -155,6 +160,11 @@ body{
                 span{
                     color: #fff;
                 }
+                svg{
+                    path{
+                        fill: #2D64F4;
+                    }
+                }
             }
         }
     }
@@ -169,6 +179,15 @@ body{
             }
             .slider__text3{
                 color: #fff;
+            }
+        }
+        .slider__next-button{
+            button{
+                svg{
+                    path{
+                        fill: #FFFFFF;
+                    }
+                }
             }
         }
     }

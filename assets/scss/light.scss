@@ -152,6 +152,18 @@
                 color: #1C2B39;
             }
         }
+        .slider__next-button{
+            button{
+                span{
+                    color: #1C2B39;
+                }
+                svg{
+                    path{
+                        fill: #2E3A59;
+                    }
+                }
+            }
+        }
     }
 }
 .recomends{
@@ -353,6 +365,11 @@
         }
         .main-form__text{
             color: #1C2B39;
+        }
+        .main-photo_first{
+            span{
+                color: rgba(45, 100, 244, 0.1);
+            }
         }
     }
 }

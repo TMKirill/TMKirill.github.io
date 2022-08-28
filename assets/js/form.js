@@ -34,27 +34,28 @@ function form_next(){
             document.querySelector('button.main-form__next').innerHTML = 'Оплатить';
         }
     }
-    else{
-        console.log(10);
-    }
 }
 function validation(){
     let mf = main_form;
     switch(current_form){
         case 0:
             if(mf.countrySelect.value == ''){
+                mf.countrySelect.closest('.choices').style.borderColor = 'red';
                 return false;
             }
             if(age_validation(mf.age.value) == false){
+                mf.age.style.borderColor = 'red';
                 return false;
             }
             if(mf.timeRange.value == ''){
+                mf.timeRange.style.borderColor = 'red';
                 return false;
             }
             if(mf.costSelect.value == ''){
+                mf.costSelect.closest('.choices').style.borderColor = 'red';
                 return false;
             }
-            if(mf.sportSelect.value == ''){
+            if(mf.sportSelect.value == ''){                mf.sportSelect.closest('.choices').style.borderColor = 'red';
                 return false;
             }
             if(mf.agree.checked == false){
@@ -66,21 +67,27 @@ function validation(){
             break;
         case 1:
             if(name_validation(mf.name.value) == false){
+                mf.name.style.borderColor = 'red';
                 return false;
             }
             if(name_validation(mf.surname.value) == false){
+                mf.surname.style.borderColor = 'red';
                 return false;
             }
             if(number_validation(mf.number.value) == false){
+                mf.number.style.borderColor = 'red';
                 return false;
             }
             if(email_validation(mf.email.value) == false){
+                mf.email.style.borderColor = 'red';
                 return false;
             }
             if(mf.passport.value == ''){
+                mf.passport.style.borderColor = 'red';
                 return false;
             }
             if(date_validation(mf.birthday.value) == false){
+                mf.birthday.style.borderColor = 'red';
                 return false;
             }
             else{
@@ -91,32 +98,30 @@ function validation(){
                 mf.passportCheck.value = mf.passport.value;
                 mf.birthdayCheck.value = mf.birthday.value;
                 if(document.querySelectorAll('.second-form__more-people-wrapper').length > 1){
-                    console.log(11);
                     let next_people_name = mf.getElementsByClassName('more-people__name');
                     let next_people_surname = mf.getElementsByClassName('more-people__surname');
                     let next_people_passport = mf.getElementsByClassName('more-people__passport');
                     let next_people_birthday = mf.getElementsByClassName('more-people__birthday');
                     console.log(next_people_name.length); 
-                    for(let i = 0; i < next_people_name.length; i++){
-                       console.log('i is: ' + i); if(name_validation(next_people_name[i].value) == false){
-                            console.log(00);
+                    for(let i = 0; i < next_people_name.length; i++){if(name_validation(next_people_name[i].value) == false){
+                next_people_name[i].style.borderColor = 'red';
                             return false;
                         }
                         if(name_validation(next_people_surname[i].value) == false){
-                            console.log(12);
+                next_people_surname[i].style.borderColor = 'red';
                             return false;
                         }
                         if(next_people_passport[i].value == ''){
-                            console.log(16);
+                next_people_passport[i].style.borderColor = 'red';
                             return false;
                         }
                         if(date_validation(next_people_birthday[i].value) == false){
-                            console.log(14);
+                next_people_birthday[i].style.borderColor = 'red';
                             return false;
                         }
                     }
                     for(let i = mf.getElementsByClassName('third-form__more-people').length; i < next_people_name.length; i++){
-                        let next_person = '<div class="third-form__more-people"><p class="third-form__more-people-header"> Турист№'+ String(i + 1) +'</p><div class="third-form__more-people-container"><p class="third-form__more-people-attribute">Ім\'я</p><p class="third-form__more-people-value">'+ String(next_people_name[i].value) +'</p><p class="third-form__more-people-attribute">Прізвище</p><p class="third-form__more-people-value">'+ String(next_people_surname[i].value) +'</p><p class="third-form__more-people-attribute">Паспорт</p><p class="third-form__more-people-value">'+ String(next_people_passport[i].value) +'</p><p class="third-form__more-people-attribute">Дата народження</p><p class="third-form__more-people-value">'+ String(next_people_birthday[i].value) +'</p></div></div>';
+                        let next_person = '<div class="third-form__more-people"><p class="third-form__more-people-header"> Турист №'+ String(i + 1) +'</p><div class="third-form__more-people-container"><p class="third-form__more-people-attribute">Ім\'я</p><p class="third-form__more-people-value">'+ String(next_people_name[i].value) +'</p><p class="third-form__more-people-attribute">Прізвище</p><p class="third-form__more-people-value">'+ String(next_people_surname[i].value) +'</p><p class="third-form__more-people-attribute">Паспорт</p><p class="third-form__more-people-value">'+ String(next_people_passport[i].value) +'</p><p class="third-form__more-people-attribute">Дата народження</p><p class="third-form__more-people-value">'+ String(next_people_birthday[i].value) +'</p></div></div>';
                         let tf = mf.querySelector('.third-form');
                         tf.insertAdjacentHTML('beforeend', next_person);
                     }
@@ -126,21 +131,27 @@ function validation(){
             break;
         case 2:
             if(name_validation(mf.nameCheck.value) == false){
+                mf.nameCheck.style.borderColor = 'red';
                 return false;
             }
             if(name_validation(mf.surnameCheck.value) == false){
+                mf.surnameCheck.style.borderColor = 'red';
                 return false;
             }
             if(number_validation(mf.numberCheck.value) == false){
+                mf.numberCheck.style.borderColor = 'red';
                 return false;
             }
             if(email_validation(mf.emailCheck.value) == false){
+                mf.emailCheck.style.borderColor = 'red';
                 return false;
             }
             if(mf.passportCheck.value == ''){
+                mf.passportCheck.style.borderColor = 'red';
                 return false;
             }
             if(date_validation(mf.birthdayCheck.value) == false){
+                mf.birthdayCheck.style.borderColor = 'red';
                 return false;
             }
             else{
@@ -149,12 +160,15 @@ function validation(){
             break;
         case 3:
             if(card_number_validation(mf.cardNumber.value) == false){
+                mf.cardNumber.style.borderColor = 'red';
                 return false;
             }
             if(card_term_validation(mf.cardTerm.value) == false){
+                mf.cardTerm.style.borderColor = 'red';
                 return false;
             }
             if(cvv_validation(mf.cardCVV.value) == false){
+                mf.cardCVV.style.borderColor = 'red';
                 return false;
             }
             else{
@@ -215,6 +229,7 @@ const elements = document.querySelectorAll('.main-form__select');
 elements.forEach(function(el){
     const choices = new Choices(el, {
         itemSelectText: '',
+        searchEnabled: false,
     });
 })
 

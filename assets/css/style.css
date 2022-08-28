@@ -20,7 +20,6 @@
   margin-left: 15px;
   font-weight: 400;
   font-size: 16px;
-  color: #1C2B39;
 }
 
 .navigation {
@@ -32,11 +31,9 @@
   grid-template-columns: repeat(5, max-content);
   grid-gap: 50px;
   padding-bottom: 10px;
-  border-bottom: 0.5px solid #C9C9C9;
 }
 .navigation__elem {
   text-decoration: none;
-  color: #1C2B39;
 }
 @media screen and (max-width: 1000px) {
   .navigation {
@@ -116,7 +113,6 @@
 .language span {
   margin: 0 5px;
   font-size: 16px;
-  color: #1C2B39;
 }
 .language span:hover {
   color: #2D64F4;
@@ -195,7 +191,6 @@
 .burger {
   width: 20px;
   height: 2px;
-  background: #1C2B39;
   border-radius: 12px;
   position: relative;
   display: none;
@@ -207,7 +202,6 @@
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #1C2B39;
   border-radius: 12px;
 }
 .burger:after {
@@ -217,7 +211,6 @@
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #1C2B39;
   border-radius: 12px;
 }
 @media screen and (max-width: 900px) {
@@ -234,7 +227,6 @@
 .header_mobile {
   margin-top: 0;
   padding-top: 43px;
-  background: #101923;
   position: fixed;
   display: block;
   z-index: 100;
@@ -334,9 +326,6 @@
   -ms-grid-column-span: 4;
   grid-column-end: 5;
 }
-.header_mobile .header__right .header__navigation-links .header__tel span {
-  color: #fff;
-}
 .header_mobile .header__right .navigation {
   width: 100%;
   margin: 0 auto;
@@ -393,7 +382,6 @@
   width: 105%;
   position: absolute;
   height: 1px;
-  background-color: #fff;
   content: "";
 }
 .header_mobile .header__right .navigation .navigation__elem {
@@ -409,7 +397,6 @@
 .header_mobile .header__right .navigation a {
   font-size: 14px;
   line-height: 24px;
-  color: #FFFFFF;
   white-space: nowrap;
 }
 .header_mobile .header__right .theme {
@@ -423,14 +410,6 @@
           align-items: center;
   margin-top: 5px;
 }
-.header_mobile .header__right .theme .moon path {
-  fill: #fff;
-  fill-opacity: 0.5;
-}
-.header_mobile .header__right .theme .sun path {
-  fill: #fff;
-  fill-opacity: 1;
-}
 .header_mobile .header__right .language {
   margin: 0 auto;
   -ms-grid-column: 1;
@@ -440,27 +419,16 @@
   -ms-grid-row: 3;
       grid-row-start: 3;
 }
-.header_mobile .header__right .language span {
-  color: #fff;
-}
 .header_mobile .burger {
   position: absolute;
   right: 0;
   top: 62px;
-  background-color: #fff;
-}
-.header_mobile .burger:after {
-  background-color: #fff;
-}
-.header_mobile .burger:before {
-  background-color: #fff;
 }
 
 .footer {
   width: 100%;
   padding-top: 50px;
   margin-top: 160px;
-  background: rgba(45, 100, 244, 0.1);
 }
 @media screen and (max-width: 900px) {
   .footer {
@@ -555,7 +523,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 30px;
-  color: rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 900px) {
   .footer .footer__links .footer__elem_logo {
@@ -577,7 +544,6 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: #1C2B39;
 }
 .footer .footer__links .footer__elem-phone a {
   font-weight: 700;
@@ -606,7 +572,6 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: #1C2B39;
 }
 .footer .footer__links .footer__elem_social a + a {
   margin-left: 12px;
@@ -638,7 +603,6 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 30px;
-  color: #000000;
 }
 .footer .footer__links .footer__elem_other span + span {
   margin-left: 21px;
@@ -681,7 +645,6 @@
       -ms-flex-align: center;
           align-items: center;
   max-height: 28px;
-  background: #FFFFFF;
   border-radius: 10px;
   -webkit-filter: drop-shadow(0px 0px 25.3846px rgba(0, 0, 0, 0.08));
           filter: drop-shadow(0px 0px 25.3846px rgba(0, 0, 0, 0.08));
@@ -709,7 +672,6 @@
 }
 .footer .footer__adres {
   padding: 25px 0;
-  border-top: 1px solid rgba(45, 100, 244, 0.25);
 }
 @media screen and (max-width: 900px) {
   .footer .footer__adres {
@@ -2168,7 +2130,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   margin-bottom: 18px;
 }
 .sport .sport__left h2 span {
@@ -2204,10 +2165,8 @@ main {
 .sport .sport__left .sport__sports-outer .sport__elem {
   border-radius: 63px;
   padding: 6px 10px;
-  background: rgba(45, 100, 244, 0.1);
   display: inline;
   line-height: 50px;
-  color: #1C2B39;
   white-space: nowrap;
   margin-right: 20px;
   -webkit-box-align: center;
@@ -2256,7 +2215,6 @@ main {
   font-size: 60px;
   line-height: 88px;
   text-transform: uppercase;
-  color: rgba(45, 100, 244, 0.1);
   top: -14px;
 }
 @media screen and (max-width: 900px) {
@@ -2301,7 +2259,6 @@ main {
   line-height: 88px;
   text-align: right;
   text-transform: uppercase;
-  color: rgba(45, 100, 244, 0.1);
 }
 @media screen and (max-width: 900px) {
   .slider-header {
@@ -2373,7 +2330,6 @@ main {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #1C2B39;
   white-space: nowrap;
 }
 .slider .slider__elem_visible .slider__text-outer .slider__text3 {
@@ -2381,7 +2337,6 @@ main {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #1C2B39;
   white-space: nowrap;
 }
 .slider .slider__elem_visible .slider__next-button {
@@ -2485,7 +2440,6 @@ main {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #1C2B39;
   white-space: nowrap;
 }
 @media screen and (max-width: 900px) {
@@ -2499,7 +2453,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #2D64F4;
   white-space: nowrap;
 }
 @media screen and (max-width: 900px) {
@@ -2513,7 +2466,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   white-space: nowrap;
 }
 @media screen and (max-width: 900px) {
@@ -2622,7 +2574,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
   margin-left: -4px;
-  color: #1C2B39;
 }
 .recomends .slider__elem_active .recomends__rate img {
   margin: 0;
@@ -2678,7 +2629,6 @@ main {
   display: inline;
   font-size: 16px;
   line-height: 30px;
-  color: #1C2B39;
 }
 .recomends .slider__elem_active .recomends__text a {
   color: #2D64F4;
@@ -2713,7 +2663,6 @@ main {
   font-weight: 500;
   font-size: 18px;
   line-height: 34px;
-  color: #1C2B39;
   text-align: center;
 }
 @media screen and (max-width: 900px) {
@@ -2732,7 +2681,6 @@ main {
   margin-top: 5px;
   text-align: center;
   text-transform: uppercase;
-  color: #1C2B39;
   margin-bottom: 100px;
 }
 .thanks-header span {
@@ -2749,7 +2697,6 @@ main {
 .present {
   margin: 0 auto;
   padding: 45px 100px;
-  background: rgba(45, 100, 244, 0.1);
   border-radius: 7px;
   display: -ms-grid;
   display: grid;
@@ -2807,7 +2754,6 @@ main {
   font-weight: 500;
   font-size: 18px;
   line-height: 34px;
-  color: #1C2B39;
 }
 .present svg {
   -ms-grid-column: 2;
@@ -2897,7 +2843,6 @@ main {
   line-height: 44px;
   text-align: center;
   text-transform: uppercase;
-  color: #1C2B39;
 }
 .thanks__what-doing span {
   color: #2D64F4;
@@ -2917,7 +2862,6 @@ main {
   font-size: 18px;
   line-height: 34px;
   text-align: center;
-  color: #1C2B39;
 }
 @media screen and (max-width: 900px) {
   .thanks__text {
@@ -2957,7 +2901,6 @@ main {
   line-height: 51px;
   text-transform: uppercase;
   width: 300px;
-  color: rgba(45, 100, 244, 0.1);
   top: -15px;
   left: -340px;
 }

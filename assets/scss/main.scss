@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     width: 100%;
@@ -24,7 +25,7 @@ body{
 }
 main{
     padding: 0 16px;
-    margin-top: 123px;
+    margin-top: 45px;
     max-width: 100%;
     @media (max-width:900px){
         margin-top: 50px;
@@ -46,10 +47,25 @@ main{
         padding-top: 4px;
         padding-left: 10px;
         .choices__list--single{
-            font-weight: 400;
+            font-weight: 600;
             font-size: 16px;
             line-height: 30px;
-            color: #C7C7C7;
+            color: #2D64F4;
+            .choices__placeholder{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+                color: #C7C7C7
+            }
+            .choices__item{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 360px;
+                white-space: nowrap;
+                @media (max-width:900px){
+                    max-width: 260px;
+                }
+            }
         }
     }
     .choices__list--dropdown{
@@ -58,14 +74,18 @@ main{
         line-height: 26px;
         text-align: center;
         color: #1C2B39;
-        padding: 0;
+        padding: 0 10px;
         border: 0;
         margin-top: 1px;
         box-shadow: 0px 0px 4px rgba(166, 166, 166, 0.25);
+        .choices__item{
+            padding: 10px 0;
+            text-align: center;
+        }
         .choices__item--selectable.is-highlighted{
             background-color: #2D64F4;
         }
-        #choices--cgvi-item-choice-2{
+        .choices__placeholder{
             display: none;
         }
     }
@@ -74,7 +94,6 @@ main{
    border: 0.380835px solid #2D64F4;
 }
 .main-form__form{
-    margin-top: -78px;
     margin-left: 38px;
     position: relative;
     background: #FFFFFF;
@@ -87,6 +106,9 @@ main{
     display: -o-flex;
     display: flex;
     flex-direction: column;
+    @media (max-width:900px){
+        padding: 20px 15px;
+    }
     .first-form__header{
         font-weight: 700;
         font-size: 18px;
@@ -297,6 +319,7 @@ main{
         flex-direction: column;
     }
     .main-form__left{
+        margin-top: 78px;
         h2{
             font-style: normal;
             font-weight: 900;
@@ -555,7 +578,6 @@ main{
     }
     .programm__wrapper{
         padding: 50px 100px;
-        background: rgba(45, 100, 244, 0.1);
         border-radius: 10px;
         @media screen and (max-width: 900px){
             padding: 30px 20px;
@@ -576,6 +598,7 @@ main{
         background: #2D64F4;
         border-radius: 5px;
         border: 0;
+        text-decoration: none;
         span{
             font-weight: 600;
             font-size: 18px;
@@ -596,7 +619,6 @@ main{
         font-size: 30px;
         line-height: 44px;
         text-transform: uppercase;
-        color: #1C2B39;
         margin-bottom: 30px;
         span{
             color: rgba(45, 100, 244, 1);
@@ -686,15 +708,12 @@ main{
         align-items: center;
         justify-content: space-between;
         padding: 35px 39px 35px 30px;
-        background: rgba(45, 100, 244, 0.15);
-        box-shadow: 0px 0px 7px rgba(227, 227, 227, 0.25);
         border-radius: 10px;
         p{
             margin-left: 40px;
             font-weight: 400;
             font-size: 18px;
             line-height: 30px;
-            color: #1C2B39;
             @media screen and (max-width:900px){
                 margin-left: 0;
                 margin-top: 10px;
@@ -739,7 +758,6 @@ main{
         font-size: 30px;
         line-height: 44px;
         text-transform: uppercase;
-        color: #1C2B39;
         margin-bottom: 30px;
         span{
             color: rgba(45, 100, 244, 1);
@@ -758,7 +776,6 @@ main{
             grid-template-columns: 1fr;
         }
         .faq__question-outer{
-            border-bottom: 0.5px solid #C9C9C9;
             padding: 30px 0;
             @media screen and (max-width:900px){
                 padding: 15px 0;
@@ -783,7 +800,6 @@ main{
                     font-weight: 700;
                     font-size: 18px;
                     line-height: 30px;
-                    color: #1C2B39;
                     @media screen and (max-width:900px){
                         font-size: 14px;
                         line-height: 22px;
@@ -800,7 +816,6 @@ main{
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 30px;
-                color: #1C2B39;
                 margin-top: 10px;
                 @media screen and (max-width:900px){
                     font-size: 14px;
@@ -821,7 +836,6 @@ main{
         font-size: 30px;
         line-height: 44px;
         text-transform: uppercase;
-        color: #1C2B39;
         span{
             color: #2D64F4;
         }
@@ -842,7 +856,6 @@ main{
             margin-top: 25px;
         }
         .what_doing__elem{
-            background: rgba(45, 100, 244, 0.15);
             border-radius: 33px;
             .what_doing__elem-header{
                 font-weight: 900;
@@ -903,9 +916,6 @@ main{
             @media screen and (max-width:900px){
                 flex-direction: column-reverse;
                 .what_doing__elem-img{
-                    path{
-                        fill-opacity: 1;
-                    }
                     margin-bottom: 20px;
                 }
             }
@@ -931,8 +941,7 @@ main{
             font-weight: 900;
             font-size: 30px;
             line-height: 44px;
-            text-transform: uppercase; 
-            color: #1C2B39; 
+            text-transform: uppercase;
             margin-bottom: 15px;
             span{
                 color: #2D64F4;
@@ -947,7 +956,6 @@ main{
             font-weight: 400;
             font-size: 18px;
             line-height: 30px;
-            color: #1C2B39;
             @media screen and (max-width:900px){
                 font-size: 14px;
                 line-height: 28px;
@@ -1029,7 +1037,6 @@ main{
             font-size: 78px;
             line-height: 116px;
             text-transform: uppercase;
-            color: rgba(45, 100, 244, 0.05);
             @media screen and (max-width:900px){
                 display: none;
             }
@@ -1046,7 +1053,6 @@ main{
         font-size: 30px;
         line-height: 44px;
         text-transform: uppercase;
-        color: #1C2B39;
         width: 40%;
         span{
             color: rgba(45, 100, 244, 1);
@@ -1075,12 +1081,6 @@ main{
             display: flex;
             align-items: center;
             padding: 13px 25px;
-            border-top: 1px solid transparent;
-            border-bottom: 1px solid transparent;
-            border-image: linear-gradient(to right, rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-            -moz-border-image: -moz-linear-gradient(left, #rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-            -webkit-border-image: -webkit-linear-gradient(left, rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-            border-image-slice: 1;
             @media screen and (max-width:900px){
                 padding: 9px 25px;
             }
@@ -1089,7 +1089,6 @@ main{
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 44px;
-                color: #1C2B39;
             }
         }
     }

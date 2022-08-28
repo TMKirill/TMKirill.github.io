@@ -732,6 +732,7 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -759,7 +760,7 @@ body {
 
 main {
   padding: 0 16px;
-  margin-top: 123px;
+  margin-top: 45px;
   max-width: 100%;
 }
 @media (max-width: 900px) {
@@ -786,10 +787,27 @@ main {
   padding-left: 10px;
 }
 .choices .choices__inner .choices__list--single {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: #2D64F4;
+}
+.choices .choices__inner .choices__list--single .choices__placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   color: #C7C7C7;
+}
+.choices .choices__inner .choices__list--single .choices__item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 360px;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .choices .choices__inner .choices__list--single .choices__item {
+    max-width: 260px;
+  }
 }
 .choices .choices__list--dropdown {
   font-weight: 400;
@@ -797,16 +815,20 @@ main {
   line-height: 26px;
   text-align: center;
   color: #1C2B39;
-  padding: 0;
+  padding: 0 10px;
   border: 0;
   margin-top: 1px;
   -webkit-box-shadow: 0px 0px 4px rgba(166, 166, 166, 0.25);
           box-shadow: 0px 0px 4px rgba(166, 166, 166, 0.25);
 }
+.choices .choices__list--dropdown .choices__item {
+  padding: 10px 0;
+  text-align: center;
+}
 .choices .choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-color: #2D64F4;
 }
-.choices .choices__list--dropdown #choices--cgvi-item-choice-2 {
+.choices .choices__list--dropdown .choices__placeholder {
   display: none;
 }
 
@@ -815,7 +837,6 @@ main {
 }
 
 .main-form__form {
-  margin-top: -78px;
   margin-left: 38px;
   position: relative;
   background: #FFFFFF;
@@ -833,6 +854,11 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media (max-width: 900px) {
+  .main-form__form {
+    padding: 20px 15px;
+  }
 }
 .main-form__form .first-form__header {
   font-weight: 700;
@@ -1092,6 +1118,9 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.main-form .main-form__left {
+  margin-top: 78px;
 }
 .main-form .main-form__left h2 {
   font-style: normal;
@@ -1411,7 +1440,6 @@ main {
 }
 .programm .programm__wrapper {
   padding: 50px 100px;
-  background: rgba(45, 100, 244, 0.1);
   border-radius: 10px;
 }
 @media screen and (max-width: 900px) {
@@ -1437,6 +1465,7 @@ main {
   background: #2D64F4;
   border-radius: 5px;
   border: 0;
+  text-decoration: none;
 }
 .programm .programm__order span {
   font-weight: 600;
@@ -1459,7 +1488,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   margin-bottom: 30px;
 }
 .programm h2 span {
@@ -1592,9 +1620,6 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 35px 39px 35px 30px;
-  background: rgba(45, 100, 244, 0.15);
-  -webkit-box-shadow: 0px 0px 7px rgba(227, 227, 227, 0.25);
-          box-shadow: 0px 0px 7px rgba(227, 227, 227, 0.25);
   border-radius: 10px;
 }
 .programm .programm__atantion p {
@@ -1602,7 +1627,6 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #1C2B39;
 }
 @media screen and (max-width: 900px) {
   .programm .programm__atantion p {
@@ -1659,7 +1683,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   margin-bottom: 30px;
 }
 .faq h2 span {
@@ -1686,7 +1709,6 @@ main {
   }
 }
 .faq .faq__questions .faq__question-outer {
-  border-bottom: 0.5px solid #C9C9C9;
   padding: 30px 0;
 }
 @media screen and (max-width: 900px) {
@@ -1722,7 +1744,6 @@ main {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  color: #1C2B39;
 }
 @media screen and (max-width: 900px) {
   .faq .faq__questions .faq__question-outer .faq__question span {
@@ -1740,7 +1761,6 @@ main {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
-  color: #1C2B39;
   margin-top: 10px;
 }
 @media screen and (max-width: 900px) {
@@ -1764,7 +1784,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
 }
 .what-doing h2 span {
   color: #2D64F4;
@@ -1808,7 +1827,6 @@ main {
   }
 }
 .what-doing .what-doing__main .what_doing__elem {
-  background: rgba(45, 100, 244, 0.15);
   border-radius: 33px;
 }
 .what-doing .what-doing__main .what_doing__elem .what_doing__elem-header {
@@ -1894,9 +1912,6 @@ main {
   .what-doing .what-doing__main .what_doing__elem_second .what_doing__elem-img {
     margin-bottom: 20px;
   }
-  .what-doing .what-doing__main .what_doing__elem_second .what_doing__elem-img path {
-    fill-opacity: 1;
-  }
 }
 
 .extreme {
@@ -1927,7 +1942,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   margin-bottom: 15px;
 }
 .extreme .extreme__left h2 span {
@@ -1944,7 +1958,6 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #1C2B39;
 }
 @media screen and (max-width: 900px) {
   .extreme .extreme__left p {
@@ -2051,7 +2064,6 @@ main {
   font-size: 78px;
   line-height: 116px;
   text-transform: uppercase;
-  color: rgba(45, 100, 244, 0.05);
 }
 @media screen and (max-width: 900px) {
   .extreme .extreme__right .extreme__right-header {
@@ -2072,7 +2084,6 @@ main {
   font-size: 30px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1C2B39;
   width: 40%;
 }
 .traumas h2 span {
@@ -2112,13 +2123,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding: 13px 25px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  -o-border-image: linear-gradient(to right, rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-     border-image: -webkit-gradient(linear, left top, right top, from(rgba(45, 100, 244, 0.03)), color-stop(rgba(0, 70, 255, 0.25)), color-stop(rgba(0, 70, 255, 0.25)), color-stop(rgba(0, 70, 255, 0.25)), to(rgba(45, 100, 244, 0)));
-     border-image: linear-gradient(to right, rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-  -webkit-border-image: -webkit-linear-gradient(left, rgba(45, 100, 244, 0.03), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(0, 70, 255, 0.25), rgba(45, 100, 244, 0));
-  border-image-slice: 1;
 }
 @media screen and (max-width: 900px) {
   .traumas .traumas__outer .traumas__elem {
@@ -2130,7 +2134,6 @@ main {
   font-weight: 600;
   font-size: 16px;
   line-height: 44px;
-  color: #1C2B39;
 }
 
 .sport {

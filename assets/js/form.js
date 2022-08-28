@@ -199,6 +199,7 @@ function cvv_validation(cvv){
 new AirDatepicker('#datepicker', {
     range: true,
     multipleDatesSeparator: ' - ',
+    autoClose: true,
 });
 
 function form_prev(){

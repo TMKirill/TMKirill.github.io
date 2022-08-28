@@ -52,11 +52,11 @@
                 </div>
                    <div class="header__navigation-links">
                     <nav class="navigation">
-                        <a href="#" class="navigation__elem">Вартість</a>
-                        <a href="#" class="navigation__elem">Види спорту</a>
-                        <a href="#" class="navigation__elem">Питання</a>
-                        <a href="#" class="navigation__elem">Відгуки</a>
-                        <a href="#" class="navigation__elem navigation__elem_last">Контакти</a>
+                        <a href="#form" class="navigation__elem">Вартість</a>
+                        <a href="#sports" class="navigation__elem">Види спорту</a>
+                        <a href="#faq" class="navigation__elem">Питання</a>
+                        <a href="#recomends" class="navigation__elem">Відгуки</a>
+                        <a href="#footer" class="navigation__elem navigation__elem_last">Контакти</a>
                     </nav>
                     <div class="tel header__tel">
                         <a href="tel:+380800305122">0 800 305 122</a>
@@ -70,7 +70,7 @@
             <div class="shadow"></div>
         </header>
         <main>
-            <section class="main-form">
+            <section class="main-form" id="form">
                 <div class="main-form__left"><h2>Оформіть страхування для <span>екстремального</span> виду спорту</h2>
                 <p class="main-form__text">
                     У разі отримання спортивної травми. Ми гарантновано надамо медичну домогу та виплатимо компенсацію
@@ -92,6 +92,7 @@
                         <span class="first-form__header">Оформіть поліс онлайн</span>
                         <span class="first-form__discr">Територія дії полісу</span>
                         <select name="countrySelect" class="main-form__country main-form__select">
+                           <option value="">Виберіть територію</option>
                             <option value="ukraine">Україна</option>
                             <option value="europe">Європа</option>
                             <option value="world">Весь світ</option>
@@ -102,13 +103,15 @@
                         <input type="text" name="timeRange" placeholder="Введіть дату" id="datepicker">
                         <span class="first-form__discr">Покриття на сумму</span>
                         <select name="costSelect" class="main-form__cost main-form__select">
-                            <option value="50000">50000</option>
-                            <option value="100000">100000</option>
-                            <option value="200000">200000</option>
-                            <option value="1000000">1000000</option>
+                           <option value="">Виберіть суму</option>
+                            <option value="50000">50 000 USD</option>
+                            <option value="100000">100 000 USD</option>
+                            <option value="200000">200 000 USD</option>
+                            <option value="1000000">1 000 000 USD</option>
                         </select>
                         <span class="first-form__discr">Вид спорту</span>
                         <select name="sportSelect" class="main-form__sport main-form__select">
+                           <option value="">Виберіть спорт</option>
                             <option value="1">Автомобільний спорт на спеціальних трасах</option>
                             <option value="2">Армреслінг</option>
                             <option value="3">Банджі-джампінг, роуп-джампінг та інші види тарзанок</option>
@@ -280,8 +283,8 @@
 
                     <p>Якщо у вас стався нещасний випадок, ми потурбуємося про ваше лікування: швидко знайдемо найближчу лікарню, організуємо транспортування туди, оформимо депозит для надання медичних послуг та оплатимо всі необхідні ліки</p>
                 </div></div><div class="programm__order-outer">
-                <button class="programm__order">
-               <span>Оформити</span></button></div>
+                <a class="programm__order" href="#form">
+               <span>Оформити</span></a></div>
             </section>
             <section class="step-slider">
             <p class="slider-header">Як оформити страховку для <span>екстремального</span> спорту?</p>
@@ -360,7 +363,7 @@
                         </div></div>
                 </div>
             </section>         
-            <section class="traumas">
+            <section class="traumas" id="traumas">
                 <h2>Які травми ви можете <span>отримати?</span></h2>
                 <div class="traumas__outer">
                     <div class="traumas__elem"><img src="assets/imgs/traumas/1.svg" alt=""><span>Розтягнення</span></div>
@@ -400,7 +403,7 @@
 </svg></div>
                 </div>
             </section>
-            <section class="sport">
+            <section class="sport" id="sports">
                 <div class="sport__left">
                     <h2>Страхування всіх <span>небезпечних</span> видів спорту</h2>
                     <div class="sport__sports-outer">
@@ -476,7 +479,7 @@
                     <p class="extreme__right-header">EXTREME</p>
                 </div>
             </section>
-            <section class="recomends">
+            <section class="recomends" id="recomends">
                <p class="slider-header">Відгуки наших <span>клієнтів</span></p>
                 <div class="slider">
                     <div class="slider__elem_visible slider__elem slider__elem_active" onclick="slider_next_step(1)">
@@ -639,7 +642,7 @@
                     
                 </div>
             </section>
-            <section class="faq">
+            <section class="faq" id="faq">
                 <h2>Питання - Відповідь <span>(FAQ)</span></h2>
                 <div class="faq__questions">
                    <div class="faq__question-wrapper"><div class="faq__question-outer">
@@ -666,7 +669,7 @@
             </section>
         </main>
         </div>
-    <footer class="footer">
+    <footer class="footer" id="footer">
        <div class="footer__wraper">
         <div class="footer__links">
             <div class="footer__elem footer__elem_logo">

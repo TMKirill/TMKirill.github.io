@@ -196,23 +196,20 @@ window_width.addListener(arrow_adder);
 
 document.querySelectorAll('.navigation a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        let elem_top = document.querySelector(this.getAttribute('href')).offsetTop;
         e.preventDefault();
- 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        for(let dist = 0; dist<=elem_top; dist+=elem_top/5)
+        {
+            console.log(window.pageYOffset);
+            console.log(elem_top);
+//            setTimeout(function(){})
+//            while(window.pageYOffset<elem_top){
+                window.scrollBy({
+                    top: dist,
+                    behavior: "smooth"
+                })
+//            }
+        }
+//        setInterval(scrolling, 200, document.querySelector(this.getAttribute('href')).offsetTop/5);
     });
-});
-$('.navigation a').on('click', function() {
-
-    let href = $(this).attr('href');
-
-    $('html, body').animate({
-        scrollTop: $(href).offset().top
-    }, {
-        duration: 1000,   // по умолчанию «400» 
-        easing: "linear" // по умолчанию «swing» 
-    });
-
-    return false;
 });

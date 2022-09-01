@@ -253,3 +253,7 @@ function more_people(index){
     }
     console.log(more_people_outer);
 }
+
+main_form.costSelect.addEventListener('change', function(){ 
+    main_form.querySelector('.price-outer').style.display = 'block';
+});

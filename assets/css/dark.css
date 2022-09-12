@@ -107,7 +107,7 @@ body {
 }
 
 .slider-header {
-  color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .slider .slider__elem_visible .slider__text-outer .slider__text2 {

@@ -233,26 +233,54 @@ elements.forEach(function(el){
     });
 })
 
-function more_people(index){
-    const new_person_wrapper = '<div class="second-form__more-people-wrapper"><button type="button" class="second-form__more-people" onclick="more_people('+ String(index + 1) +')"><span>+Додати учасника</span><img src="assets/imgs/close.svg" alt="#" class="second-form__more-people-img"></div>';
+let more_people_wrapper = document.querySelectorAll('.second-form__more-people-wrapper');
+
+function more_people(){
+    const new_person_wrapper = '<div class="second-form__more-people-wrapper"><button type="button" class="second-form__more-people"><span>+Додати учасника</span><img src="assets/imgs/close.svg" alt="#" class="second-form__more-people-img"></div>';
     const more_people_outer = document.querySelector('.second-form__more-people-outer');
-    const more_people_wrapper = document.querySelectorAll('.second-form__more-people-wrapper');
+//    const more_people_wrapper = document.querySelectorAll('.second-form__more-people-wrapper');
     const more_people_svg = document.getElementsByClassName('second-form__more-people-img');
-    if(more_people_svg[index].classList.contains('second-form__more-people-img-visible') == false){ 
-        more_people_svg[index].classList.add('second-form__more-people-img-visible');
-        more_people_wrapper[index].querySelector('.second-form__more-people span').style.margin = '0';more_people_wrapper[index].querySelector('.second-form__more-people span').innerHTML = 'Турист №' + String(more_people_wrapper.length);
-        more_people_wrapper[index].insertAdjacentHTML('beforeend', new_person)
-        more_people_wrapper[index].insertAdjacentHTML('afterend', new_person_wrapper)
+    if(this.querySelector('.second-form__more-people-img').classList.contains('second-form__more-people-img-visible') == false){ 
+        this.querySelector('.second-form__more-people-img').classList.add('second-form__more-people-img-visible');
+        this.querySelector('.second-form__more-people span').style.margin = '0';
+        this.querySelector('.second-form__more-people span').innerHTML = 'Турист №' + String(more_people_wrapper.length);
+        this.insertAdjacentHTML('beforeend', new_person)
+        this.insertAdjacentHTML('afterend', new_person_wrapper)
     }
     else{ 
-        more_people_svg[index].classList.remove('second-form__more-people-img-visible')
-        more_people_wrapper[index].querySelector('.second-form__more-people span').style.margin = '0 auto';
-        more_people_wrapper[index].querySelector('.second-form__more-people span').innerHTML = '+Додати учасника';
-        more_people_wrapper[index].innerHTML = more_people_wrapper[index].innerHTML.replace(new_person, '');
-        more_people_outer.removeChild(more_people_wrapper[more_people_wrapper.length - 1])
+        this.classList.remove('second-form__more-people-img-visible')
+        this.querySelector('.second-form__more-people span').style.margin = '0 auto';
+        this.querySelector('.second-form__more-people span').innerHTML = '+Додати учасника';
+        this.innerHTML = this.innerHTML.replace(new_person, '');
+        more_people_outer.removeChild(this)
     }
-    console.log(more_people_outer);
+    console.log(this);
 }
+
+more_people_wrapper.forEach(function(mpw){
+    mpw.addEventListener('click', more_people);
+})
+
+//function more_people(index){
+//    console.log(this);
+//    const new_person_wrapper = '<div class="second-form__more-people-wrapper"><button type="button" class="second-form__more-people" onclick="more_people('+ String(index + 1) +')"><span>+Додати учасника</span><img src="assets/imgs/close.svg" alt="#" class="second-form__more-people-img"></div>';
+//    const more_people_outer = document.querySelector('.second-form__more-people-outer');
+//    const more_people_wrapper = document.querySelectorAll('.second-form__more-people-wrapper');
+//    const more_people_svg = document.getElementsByClassName('second-form__more-people-img');
+//    if(more_people_svg[index].classList.contains('second-form__more-people-img-visible') == false){ 
+//        more_people_svg[index].classList.add('second-form__more-people-img-visible');
+//        more_people_wrapper[index].querySelector('.second-form__more-people span').style.margin = '0';more_people_wrapper[index].querySelector('.second-form__more-people span').innerHTML = 'Турист №' + String(more_people_wrapper.length);
+//        more_people_wrapper[index].insertAdjacentHTML('beforeend', new_person)
+//        more_people_wrapper[index].insertAdjacentHTML('afterend', new_person_wrapper)
+//    }
+//    else{ 
+//        more_people_svg[index].classList.remove('second-form__more-people-img-visible')
+//        more_people_wrapper[index].querySelector('.second-form__more-people span').style.margin = '0 auto';
+//        more_people_wrapper[index].querySelector('.second-form__more-people span').innerHTML = '+Додати учасника';
+//        more_people_wrapper[index].innerHTML = more_people_wrapper[index].innerHTML.replace(new_person, '');
+//        more_people_outer.removeChild(more_people_wrapper[more_people_wrapper.length - 1])
+//    }
+//}
 
 main_form.costSelect.addEventListener('change', function(){ 
     main_form.querySelector('.price-outer').style.display = 'block';

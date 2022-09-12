@@ -15,8 +15,8 @@ const ididi = document.getElementById('sports');
 console.log(ididi.offsetTop);
 
 Array.from(sliders).forEach(function(sl){
-    sl.addEventListener('touchstart', touch_point, false, {passive: true});
-    sl.addEventListener('touchmove', touch_move, false, {passive: true})
+    sl.addEventListener('touchstart', touch_point, {capture: false, passive: true});
+    sl.addEventListener('touchmove', touch_move, {capture: false, passive: true})
 })
 let x1 = null;
 

@@ -621,6 +621,7 @@ main{
         justify-content: center;
     }
     .programm__order{
+                text-align: center;
         margin: 0 auto;
         margin-top: 35px;
         padding: 14px 75px;
@@ -629,6 +630,7 @@ main{
         border: 0;
         text-decoration: none;
         span{
+            text-align: center;
             font-weight: 600;
             font-size: 18px;
             line-height: 30px;
@@ -1268,6 +1270,21 @@ main{
         color: #1C2B39;
         span{
             color: #2D64F4;
+        }
+    }
+}
+.slider-hand{
+    display: none;
+    @media screen and (max-width: 900px){
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        .slider-hand__img{
+
         }
     }
 }

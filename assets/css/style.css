@@ -1455,6 +1455,7 @@ main {
           justify-content: center;
 }
 .programm .programm__order {
+  text-align: center;
   margin: 0 auto;
   margin-top: 35px;
   padding: 14px 75px;
@@ -1464,6 +1465,7 @@ main {
   text-decoration: none;
 }
 .programm .programm__order span {
+  text-align: center;
   font-weight: 600;
   font-size: 18px;
   line-height: 30px;
@@ -2308,6 +2310,24 @@ main {
   }
   .slider-header span {
     color: #2D64F4;
+  }
+}
+
+.slider-hand {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .slider-hand {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 24px;
   }
 }
 

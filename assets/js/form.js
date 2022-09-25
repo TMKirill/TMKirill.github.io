@@ -15,6 +15,16 @@ function promo_add(){
     }
 };
 
+let tel_mask_options = {
+    mask: '+{38}(000)000-00-00'
+}
+let term_mask_options = {
+    mask: '00/00'
+}
+IMask(main_form.number, tel_mask_options);
+IMask(main_form.numberCheck, tel_mask_options);
+IMask(main_form.cardTerm, term_mask_options);
+
 function form_next(){
     if(current_form == (forms.length - 1) && validation() == true){
         current_form = 0;
@@ -59,6 +69,7 @@ function validation(){
                 return false;
             }
             if(mf.agree.checked == false){
+                mf.agree.closest('.main-form-checkbox-outer').lastChild.previousSibling.style.color = 'red';
                 return false;
             }
             else{
@@ -182,7 +193,7 @@ function email_validation(email){
     return re.test(String(email));
 }
 function number_validation(number){
-    let re = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/;
+    let re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
     return re.test(String(number));
 }
 function date_validation(date){

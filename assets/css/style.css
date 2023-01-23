@@ -92,11 +92,14 @@
     color: #FFFFFF;
 }
 .form input[type='text'], .form input[type='email']{
+    padding-left: 20px;
+    font-size: 16px;
     margin-bottom: 24px;
     background: rgba(255, 255, 255, 0.51);
     border: 1px solid #FFFFFF;
     border-radius: 100px;
     height: 43px;
+    color: #fff;
 }
 .form input[type='submit']{
     padding: 12px 24px;

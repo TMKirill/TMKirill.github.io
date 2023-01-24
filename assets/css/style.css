@@ -8,6 +8,7 @@
     background-image: url('../imgs/bg1.png');
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 47px;
     padding-bottom: 100px;
 }
@@ -55,6 +56,9 @@
     color: #FFFFFF;
     border: 0;
     margin-top: 44px;
+}
+.first__right img{
+    width: 651px;
 }
 .form{
     background-color: #A1498C;
@@ -118,6 +122,7 @@
     background-image: url('../imgs/bg2.png');
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
     background-color: #fafafa;
 }
 .tale__header{
@@ -152,6 +157,9 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
     border-radius: 24px;
+    max-width: 340px;
+}
+.tale__elem omg{
     max-width: 340px;
 }
 .tale__elem + .tale__elem{
@@ -211,15 +219,19 @@ footer span{
 .links a + a{
     margin-left: 18px;
 }
-@media screen and (max-width: 900px){
-    .logo img{
-        width: 154px;
+@media screen and (max-width: 1250px){
+    .tale__panel{
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
     }
     .first__main{
         flex-direction: column;
     }
-    .tale__panel{
-        flex-direction: column;
+}
+@media screen and (max-width: 900px){
+    .logo img{
+        width: 154px;
     }
     footer{
         padding: 44px 0;
@@ -312,7 +324,7 @@ footer span{
 }
 @media screen and (max-width: 370px){
     .first__right img{
-        width: 340px;
+        width: 320px;
     }
     .tale__elem{
         max-width: 260px;

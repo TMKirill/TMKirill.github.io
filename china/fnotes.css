@@ -1,0 +1,89 @@
+:root {
+
+
+  --side-note-sup-offset: -6px;
+  --color-footnote:#007934;
+  --color-footnote-hover: #005022;
+  --footnote-font-size: 11px;
+  --footnote-font-family: 'Fira Sans', sans serif;
+}
+
+input {
+  display: none;
+}
+
+/* Sup text */
+input:not(.alltoggle)+label {
+  font-size: var(--footnote-font-size);
+  margin-top: 0;
+  font-family: var(--footnote-font-family);
+  cursor: pointer;
+  transition: color 0.1s;
+  color: var(--color-footnote);
+  font-weight: 700;
+  -webkit-font-feature-settings: "tnum" 1;
+  font-feature-settings: "tnum" 1;
+
+  /* Mimic 'vertical-align: super' (browser style for sup tag)
+   * without causing a gap in our text's implicit grid. */
+  vertical-align: baseline;
+  position: relative;
+  top: var(--side-note-sup-offset);
+}
+
+
+input+label:before {
+  content: " ";
+}
+
+input.alltoggle+label:before {
+  content: "";
+}
+
+input+label:after {
+  content: " ";
+}
+
+input.alltoggle+label:after {
+  content: "";
+}
+
+input+label:hover {
+  color: var(--color-footnote-hover);
+}
+
+/* Footnote text */
+
+small {
+  color: var(--color-text-secondary);
+  font-size: 0.875em;
+
+}
+
+input+label+small {
+  transition: opacity 0.2s 0.05s;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+}
+
+input:checked+label+small {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  padding: 1ch 3ch;
+  display: block;
+  color: var(--color-text-secondary);
+
+}
+
+
+.footnote-number {
+  counter-increment: footnote-counter;
+}
+
+.footnote-number:after {
+  content: counter(footnote-counter);
+  position: relative;
+}

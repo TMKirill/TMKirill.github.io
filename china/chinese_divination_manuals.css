@@ -1,0 +1,8 @@
+  .simpleTable {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+  table.simpleTable td{
+    border-width:0px;overflow:hidden;padding:0.3em 0.3em 0.3em 0.3em;
+    word-break:normal;}
+
+#tbl\:ganzhia table, #tbl\:ganzhib table {
+      width: 50%;
+    }

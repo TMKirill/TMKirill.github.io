@@ -1,0 +1,377 @@
+/* ### Basic formatting and variables */
+
+:root {
+  --mtcgreen: #007934;
+  --mtcgreendarker: #005022;
+
+}
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+font-family: 'Open Sans', sans-serif;
+counter-reset: footnote-counter;
+}
+
+a {
+  color: var(--mtcgreen);
+}
+
+a:hover {
+  color: var(--mtcgreendarker);
+}
+
+h1, h2, h3, .elementlist {
+font-family: 'Merriweather', serif;
+}
+
+.invisible {
+	display: none;
+}
+
+/* Generic highlighter for emphasized text */
+
+.emph {
+  background-color: yellow;
+  }
+
+/* ### MTC article header */
+  
+.pageheader {
+  display: flex;
+  justify-content: space-between;
+  height: 101px;
+  margin: 5px 30px 0 30px;
+ }
+ 
+ .logo {
+   
+ }
+ 
+ .issn {
+   margin-top: 10px;
+   text-align: right;
+ }
+ 
+@media (max-width: 1000px){
+.mtclogoimage {
+  width: 250px;
+ }
+.issnvolume {
+  font-size: 0.75em;
+}
+}
+
+
+ .volumeyear {
+   text-align: right;
+ }
+ 
+ .licenseblock {
+   display: flex;
+   justify-content: space-between;
+   padding-bottom:20px;
+   align-items: flex-end;
+ }
+
+ .cclogo {
+    padding-left:10px;
+ }
+ 
+ .cctext{
+   font-size: smaller; 
+ }
+
+
+/* ### Formatting for specific elements of MTC articles */
+
+/* Links to tables and figures embedded in the article text */
+
+article a[href^="#tbl"],
+article a[href^="#fig"]
+{
+  background-color: #007934;
+  color:#fff;
+  padding: 0 4px 0 4px;
+}
+
+/* Add an SVG icon next to URLs leading to external sites */
+
+article a[href^="http"]::after,
+article a[href^="https://"]::after,
+.legend a[href^="http"]::after,
+.legend a[href^="https"]::after
+{
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-left: 4px;
+  background-color: #000;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  display: inline-block;
+}
+
+figcaption a[href^="http"]::after,
+figcaption a[href^="https://"]::after
+{
+  background-color: #fff;
+}
+
+/* Table formatting */
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+article table tr.even {
+  background-color: lightgrey;
+}
+article table tr:hover {
+  background-color:#88cfa7;
+}
+
+article table th, article table td {
+  padding: 0.2em;
+}
+
+article table th {
+  text-align: left;
+      background-color: #007934;
+      font-weight: bold;
+      color:white;
+}
+
+
+/* Bibliographic entries */
+
+.csl-entry {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-indent: -1.5em;
+}
+
+/* Other elements */
+
+.abstract {
+background-color: #e6e6e6;
+padding: 0.8em;
+border: 1px darkgray solid;
+}
+
+hr.style1 {
+	border-top: 1px dashed #8c8b8b;
+}
+
+/* Images and captions */
+
+.figure-group {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+}
+
+figure {
+margin:0;
+}
+
+.spanning-columns-right {
+grid-row: 1 / span 2;
+grid-column: 2 / 2;
+}
+
+@media (min-width: 1000px){
+.figure-group{
+display:inline-grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+      
+      grid-gap: 20px;
+      width: 100%;
+}
+
+figure {
+margin: 0px;
+}
+
+}
+
+.nontabulated {
+grid-column-start:1;
+grid-column-end:-1;
+}
+
+
+img.centered {
+display:block;
+margin-left: auto;
+margin-right:auto;
+}
+
+img.vertlimit {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0.55em;
+height: 60vh;
+
+}
+
+/* ### Table and figure captions */
+
+article table caption, article figure figcaption {
+  text-align: left;
+  padding: 0.5em;
+  margin: 0.5em 0 ;
+  font-weight: bold;
+  background-color: #007934;
+  color: whitesmoke;
+}
+
+
+figcaption {
+mix-blend-mode: difference;
+}
+
+figcaption a {
+color: lightblue;
+}
+
+figcaption a:hover {
+color:#6699ff;
+}
+
+/* ### MTC bicolumn layout with the text on the left-hand side and the main image on the right-hand side*/
+
+.row {
+display: flex;}
+/* Create two equal columns that floats next to each other */
+.column {
+  flex: 50%;
+  padding: 0px;
+}
+
+.textpage {
+  padding: 0 20px 0 20px;
+}
+@media (min-width: 700px)  {
+	.textpage {
+padding: 0 30px 0 30px;
+}
+}
+
+.grid-manuscript-display {
+				display: grid;
+				display: -ms-grid;
+            grid-template-columns: auto;
+				-ms-grid-columns: 100%;            
+            grid-template-rows: minmax(250px, 75%) minmax(min-content, 25%);
+            -ms-grid-rows: 85% 15%;
+            grid-gap: 10px;
+            padding: 10px; 
+            position: fixed;
+            
+            width: 50%;
+            height: 100%;
+            }
+ @media (min-width: 700px)  {
+	.grid-manuscript-display {
+grid-template-rows: minmax(250px, 85%) minmax(min-content, 15%);
+}
+}
+
+@media (min-height: 700px)  {
+	.grid-manuscript-display {
+grid-template-rows: minmax(250px, 85%) minmax(min-content, 15%);
+}
+}
+
+#manuscript {
+  grid-row: 1;
+  grid-column: 1;
+				-ms-grid-row: 1;
+				-ms-grid-column: 1;
+            background-color: whitesmoke;
+            height:100%;            
+}
+
+/* ### Legend under the main image */
+
+.legend {
+grid-row: 2;
+grid-column: 1;
+-ms-grid-row: 2;
+-ms-grid-column: 1;
+text-align: left;
+padding: 10px 0 10px 0;
+}
+
+@media (max-width: 1000px){
+.legend {
+    font-size: 0.75em;
+}
+}
+
+.legendsmallfont {
+  font-size:smaller;
+}
+
+
+.caption {
+  padding: 10px 0 10px 0;
+}
+
+.flex-caption {
+display: flex;
+flex-flow: row wrap;
+justify-content: flex-start;
+
+width: 100%;
+}
+
+.flex-caption-item {
+margin:auto;
+padding: 2px;
+flex-grow: 2;
+flex-shrink:1;
+}
+
+.elementlist, .ImageFigureCaption{
+font-weight: bold;}
+
+.ImageFigureCaption {
+  padding: 0.3em;
+  margin: 0.5em 0;
+  font-weight: bold;
+  background-color: #007934;
+  color:white;  
+}
+
+.SourceText {
+  font-size: 0.8em;
+}
+
+
+/* ### Popup tooltip formatting */
+
+#footnote_box {
+      font-size: 14px;
+      background: white;
+      padding: 0 10px;
+      margin: 10px;
+
+      border: 1px solid #888;
+      -moz-box-shadow: 0px 0px 5px #888;
+      -webkit-box-shadow: 0px 0px 5px #888;
+      box-shadow: 0px 0px 5px #888;
+         z-index: 1600;     
+    }    
+

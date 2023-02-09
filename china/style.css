@@ -412,4 +412,7 @@ font-weight: bold;}
 	#manuscript{
 		height: 90%;
 	}
+    .legend{
+        padding-right: 20px;
+    }
 }

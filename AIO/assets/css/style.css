@@ -1331,6 +1331,9 @@ h3 span {
   .reviews #reviews__background2 {
     display: none;
   }
+  .reviews img {
+    display: none;
+  }
   .reviews__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1340,6 +1343,9 @@ h3 span {
   }
   .reviews__elem_last {
     display: none !important;
+  }
+  .reviews__elem_header img {
+    display: inline;
   }
 }
 @media (max-width: 900px) {

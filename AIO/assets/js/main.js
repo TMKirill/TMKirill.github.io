@@ -15,7 +15,19 @@ let forms = document.forms;
 let review_form = forms[0];
 let form = forms[1];
 let form_submit_button = document.querySelector('.form__submit');
+let promises = document.querySelectorAll('.promise__elem img');
 let numbers = Array.from(document.getElementsByClassName('numbers__number'));
+
+promises.forEach(function(promise){
+    promise.addEventListener("mouseover", function(event){
+        event.target.src = event.target.src.replace('.png', '1.png')
+    })
+});
+promises.forEach(function(promise){
+    promise.addEventListener("mouseleave", function(event){
+        event.target.src = event.target.src.replace('1.png', '.png')
+    })
+});
 
 let animations = function(){
     numbers.forEach(function(number){
